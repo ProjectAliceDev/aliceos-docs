@@ -1,0 +1,1 @@
+This part of the documentation covers parts relating to the AliceOS system itself.
