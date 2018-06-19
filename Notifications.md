@@ -70,7 +70,7 @@ call screen ask_permission(ddlc_name, allow_fs, no_action=Return(1), yes_action=
 ```
 
 #### `banner(icon, app_name, title, message, response)`
-Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds.
+Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of `0`.
 * `icon` - the icon next to the app's name
 * `app_name` - the name of your app
 * `title` - either the sender or the main message
