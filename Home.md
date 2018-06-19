@@ -6,6 +6,6 @@ The AliceOS system provides a native set of functions, screens, and tools that p
 
 # Applets
 Applets make up the app ecosystem for AliceOS. Applets are how third-party developers add additional functionality to AliceOS and interact with users and players.
-- [Applet Structure &rsaquo;](Applet_Structure)
-- [Applet Manifests &rsaquo;](Applet_Manifest)
-- [Applet Icon Guidelines &rsaquo;](Icon_Guidelines)
+- [Applet Structure &rsaquo;](Applet-Structure)
+- [Applet Manifests &rsaquo;](Applet-Manifest)
+- [Applet Icon Guidelines &rsaquo;](Icon-Guidelines)
