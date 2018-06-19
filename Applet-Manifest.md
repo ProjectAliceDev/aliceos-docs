@@ -54,3 +54,6 @@ define ddlc_icon_48 = "ddlc_48.png"
 define ddlc_icon_64 = "ddlc_64.png"
 define ddlc_icon_128 = "ddlc_128.png"
 ```
+
+---
+**Maintainer:** Marquis Kurt (@alicerunsonfedora)

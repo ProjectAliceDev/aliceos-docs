@@ -24,3 +24,6 @@ game/
 Applets are stored in the `Applets` folder, either as compiled RenPy scripts or as the original source code (compiled at runtime). App icons are stored in `Resources/icons` under multiple sizes.
 
 We've provided an applet template on GitHub that developers can use to quickly get started without worrying about setting up the structure. [Get the template here &rsaquo;](https://github.com/TheAngelReturns/aliceos-applet)
+
+---
+**Maintainer:** Marquis Kurt (@alicerunsonfedora)
