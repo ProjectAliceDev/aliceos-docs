@@ -11,17 +11,18 @@ The overall structure of an applet in AliceOS looks like this:
 ```
 game/
 	Applets/
-		AppletName.rpy
-		AppletName.rpyc
-	Resources/
-		icons/
-			applet_16.png
-			applet_24.png
-			applet_32.png
-			applet_64.png
-			applet_128.png
+        AppletName/
+		    AppletName.rpy
+		    AppletName.rpyc
+	        Resources/
+		    icons/
+			    applet_16.png
+			    applet_24.png
+			    applet_32.png
+			    applet_64.png
+			    applet_128.png
 ```
-Applets are stored in the `Applets` folder, either as compiled RenPy scripts or as the original source code (compiled at runtime). App icons are stored in `Resources/icons` under multiple sizes.
+The Applet itself, as well as its manifest, is located in its source code. Additional resources such as app icons, images, etc., are located in the `Resources` folder.
 
 We've provided an applet template on GitHub that developers can use to quickly get started without worrying about setting up the structure. [Get the template here &rsaquo;](https://github.com/TheAngelReturns/aliceos-applet)
 
