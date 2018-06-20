@@ -69,10 +69,9 @@ Asks the user permission to perform an action or to access a system-related func
 call screen ask_permission(ddlc_name, allow_fs, no_action=Return(1), yes_action=Return(0))
 ```
 
-#### `banner(icon, app_name, title, message, response)`
+#### `banner(applet, title, message, response)`
 Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of `0`.
-* `icon` - the icon next to the app's name
-* `app_name` - the name of your app
+* `applet` - the applet sending the notification
 * `title` - either the sender or the main message
 * `message` - the message or details
 * `response` - function called when the user presses Respond
