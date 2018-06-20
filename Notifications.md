@@ -78,7 +78,7 @@ Presents a temporary banner at the top of the screen. Automatically dismisses af
 > If you need something "quick n' dirty", you can also make use of `renpy.notify()`; however, you won't have the same control as `banner()`.
 
 ```renpy
-call screen banner(ddlc_icon_24, ddlc_name, "You're all set!", "You now will receive notifications in the game.", response=Return(1))
+call screen banner(ddlc, "You're all set!", "You now will receive notifications in the game.", response=Return(1))
 ```
 
 ---
