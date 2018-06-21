@@ -17,12 +17,22 @@ There are multiple types of notifications that take inspiration from the way not
 ### App manifest requirements
 If you plan to have your AliceOS app send notifications, you need the following information in your app's manifest (provided is an example):
 ```renpy
-# Provide a short name and a long name for your app.
-define ddlc_short_name = "DDLC"
-define ddlc_name = "Doki Doki Literature Club!"
-
-# Define your icons here. They should be located in Resources/icons/
-define ddlc_icon_24 = "ddlc_24.png"
+init -10000 python:
+    class DokiDoki(Applet):
+        # Provide a short name and a long name for your app.
+        short_name = "DDLC"
+        long_name = "Doki Doki Literature Club!"
+        app_dir = "DDLC"
+        permissions = {pm_notify}
+        icons = {
+            16: "16.png",
+            24: "24.png",
+            32: "32.png",
+            64: "64.png",
+            128: "128.png",
+            256: "256.png"
+        }
+    ddlc = DokiDoki()
 ```
 ### Notification screens
 If you commonly use a particular notification, you may want to wrap your call statement in a label:
@@ -55,9 +65,9 @@ Presents an alert that requires the user to make a choice.
 call screen confirm_alert("Do You Want To Run Alice32?", "Running this software may harm the AliceOS system.", "Don't Run", no_action=Return(1), "Run Anyway", yes_action=Return(0))
 ```
 
-#### `ask_permission(app_name, action, no_action, yes_action)`
+#### `ask_permission(applet.long_name, action, no_action, yes_action)`
 Asks the user permission to perform an action or to access a system-related function.
-* `app_name` - the name of your app
+* `applet.long_name` - the name of your app
 * `action` - the action that requires permission:
     * `allow_un` - send notifications to the user
     * `allow_fs` - access the AliceOS file system beyond the Home directory
@@ -66,8 +76,9 @@ Asks the user permission to perform an action or to access a system-related func
 * `yes_action` - function called when user presses OK
 
 ```renpy
-call screen ask_permission(ddlc_name, allow_fs, no_action=Return(1), yes_action=Return(0))
+call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))
 ```
+> Note: Most Applets already come with a function to ask for all permissions at once, [`applet.ask_all_permissions()`](https://github.com/TheAngelReturns/aliceos/wiki/Applet-Manifest#other-functions).
 
 #### `banner(applet, title, message, response)`
 Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of `0`.
@@ -80,6 +91,7 @@ Presents a temporary banner at the top of the screen. Automatically dismisses af
 ```renpy
 call screen banner(ddlc, "You're all set!", "You now will receive notifications in the game.", response=Return(1))
 ```
+> Note: Most Applets already come with a function to send a banner (temporary notification), [`send_temporary_notification()`](https://github.com/TheAngelReturns/aliceos/wiki/Applet-Manifest#other-functions).
 
 ---
 **Maintainer:** Marquis Kurt (@alicerunsonfedora)
