@@ -1,59 +1,47 @@
-Every applet comes with a manifest in the beginning of their code file. This manifest provides useful information to AliceOS such as the app's name, author, and app icon names. This manifest is required and is used by AliceOS in scripting.
+Every applet contains a manifest and essential function list as a Python class of the object `Applet`. This manifest provides data such as applet names, authors, icons, and the permissions required.
 
-## Common File Headers
-AliceOS code, including third-party applets, have a common header that makes it easy to identify what that file does. An example looks like this:
-```renpy
-## Messages.rpy
-# Send and receive messages from characters
-# Author: Marquis Kurt (@alicerunsonfedora)
-# Copyright: (C) 2018
+## Applet Template
+The [Applet Template](https://github.com/TheAngelReturns/aliceos-applet) provided by the AliceOS Team provides a structure that can be followed to create a working Applet with proper manifest data. Aspiring AliceOS applet developers should start with the template before creating their own classes and applets from scratch.
+
+## The `Applet()` class
+The `Applet()` class is provided as a Framework for AliceOS and consists of important data that is needed for AliceOS to render notifications, list itself in the Control Center, and add icons to the desktop shell.
+
+### Basic Applet Information
+By default, all AliceOS apps must contain the following information:
+
+- `short_name`: The short name for the applet
+- `long_name`: The full name for the applet
+- `app_dir`: The directory in which your applet resides in relative to the Applets folder
+- `author`: The author of the applet, primarily the developer or developer team
+- `version`: The semantic version of the applet (ex.: `0.1.0`)
+- `description`: A short desription containing the applet's primary functionality
+
+### Declaring App Icons
+Icons remain a key part of the AliceOS applet experience. It is recommended that you make the sizes for your icon appropriately and not merely downscale. The delcaration is as follows:
+
+```python
+icons = {
+            16: "16.png",
+            24: "24.png",
+            32: "32.png",
+            64: "64.png",
+            128: "128.png",
+            256: "256.png"
+        }
 ```
 
-## Providing app information
-AliceOS requires every app to include specific information for use in places like the desktop shell, Control Center, and notification banners. These values are defined based on each app.
+### Setting App Permissions
+AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called `permissions`.
 
-### Create an app abbreviation
-AliceOS applets should have an abbreviation to uniquely identify their variables from others. For instance, if the applet is Doki Doki Literature Club!, its abbreviation would be defined as `ddlc`. This is used in defining unique variables:
-```renpy
-# Example from template
-define app_abbreviation_short_name = "App Short name"
+- `pm_notify` - Send notifications to the user
+- `pm_files` - Access the file system outside of the user's Home folder
+- `pm_admin` - Modify system settings
 
-# DDLC example
-define ddlc_short_name = "DDLC"
-```
-If you are using the applet template, replace `app_abbreviation` with your applet's abbreviation.
+### Other Functions
+Most Applets will make use of two functions present:
 
-### Required information
-All applets should contain this information:
-- `short_name` - A short name or abbreviation of the applet's name
-- `name` - The longer or full name of the applet
-- `author` - The author's name, usually the same as in the header
-- `version` - The version of the applet
-- `description` - A short description of the applet
-
-Here's an example, continuing with DDLC:
-```renpy
-# Provide a short name and a long name for your app.
-define ddlc_short_name = "DDLC"
-define ddlc_name = "Doki Doki Literature Club!"
-
-# Provide the author information, version number, and
-# description of your app.
-define ddlc_author = "Team Salvato"
-define ddlc_version = 1.1.1
-define ddlc_description = "Will you write the way into her heart?"
-```
-
-## Defining app icons
-Icons are always stored in `Resources/icons`. Use your applet's abbreviation followed by the size to indicate your app's icon:
-```renpy
-define ddlc_icon_16 = "ddlc_16.png"
-define ddlc_icon_24 = "ddlc_24.png"
-define ddlc_icon_32 = "ddlc_32.png"
-define ddlc_icon_48 = "ddlc_48.png"
-define ddlc_icon_64 = "ddlc_64.png"
-define ddlc_icon_128 = "ddlc_128.png"
-```
+- `ask_app_permissions()` - Overtly asks the user permission for the specified items in the `permissions` list.
+- `send_temporary_notification(sender, contents, action)` - Sends a banner notification built upon the `banner()` screen.
 
 ---
 **Maintainer:** Marquis Kurt (@alicerunsonfedora)
