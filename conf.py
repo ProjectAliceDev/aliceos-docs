@@ -10,6 +10,7 @@ html_theme_options = {
     'logo_only': True
 }
 
+html_logo = '_static/logo.png'
 
 project = u'AliceOS'
 copyright = u'2018 AliceOS Developers'  # pylint: disable=redefined-builtin
