@@ -1,5 +1,4 @@
 .. toctree::
-
    index
    Notifications
    Applet-Structure
