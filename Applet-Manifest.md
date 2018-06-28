@@ -1,3 +1,4 @@
+# Applet Manifest
 Every applet contains a manifest and essential function list as a Python class of the object `Applet`. This manifest provides data such as applet names, authors, icons, and the permissions required.
 
 ## Applet Template

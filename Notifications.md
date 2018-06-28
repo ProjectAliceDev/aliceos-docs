@@ -1,3 +1,4 @@
+# Notifications
 Notifications provide a level of interactivity and information updates for your Ren'Py project. The notification system built into AliceOS contains screens for both the native and custom functions regarding dialog and notification management.
 
 ![Permissive Alerts](https://imgur.com/quWQALX.png)

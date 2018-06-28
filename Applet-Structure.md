@@ -1,3 +1,4 @@
+# Applet Structure
 Applets make up the app ecosystem for AliceOS. Applets are how third-party developers add additional functionality to AliceOS and interact with users and players. Applet follow a generic structure that makes use of existing AliceOS file structures.
 
 ## What's needed

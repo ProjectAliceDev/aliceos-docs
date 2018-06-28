@@ -1,1 +1,0 @@
-&copy; 2018 | AliceOS Developers. Licensed under GNU GPL v3.
