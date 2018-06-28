@@ -24,3 +24,7 @@ h1, h2, h3, h4, h5, h6, a, ul, li {
 .wy-side-nav-search {
     background-color: #f9c440;
 }
+
+.wy-side-nav-search input[type="text"] {
+	border-color: #ad5f00;
+}
