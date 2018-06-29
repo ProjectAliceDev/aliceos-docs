@@ -44,9 +44,12 @@ Adding the AliceOS boot screen
 ------------------------------
 
 The AliceOS boot screen helps inform users that you've added AliceOS to
-your project. There are two versions of the boot screen you can use: \*
-**Standard** (``default_boot_screen``) - the traditional AliceOS boot
-screen. \* **OEM (Partner)** (``oem_boot_screen``) - a version of the
+your project. There are two versions of the boot screen you can use: 
+
+* **Standard** (``default_boot_screen``) - the traditional AliceOS boot
+screen.
+
+* **OEM (Partner)** (``oem_boot_screen``) - a version of the
 boot screen that displays "Powered by AliceOS" rather than the
 traditional boot screen.
 
