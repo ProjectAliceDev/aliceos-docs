@@ -33,4 +33,5 @@ Doki: The Angel Returns*.
    :caption: Applets
    :name: sec-applets
    
-   Applets
+   Applets/Basics
+   Applets/RenPy

@@ -1,5 +1,5 @@
-Applets
-=======
+Applet Basics
+=============
 
 Applets are the core of the AliceOS system. Applets generally interact
 with the frameworks and services provided. Thye usually either add extra
