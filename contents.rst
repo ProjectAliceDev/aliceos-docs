@@ -1,4 +1,4 @@
 .. toctree::
    Index
-   Notifications
+   System/Notifications
    Applets
