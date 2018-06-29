@@ -60,15 +60,15 @@ The documentation is organized like this:
 
 .. toctree::
    :caption: Main
-   :name: main
+   :name: sec-main
    Index
 
 .. toctree::
    :caption: System Core
-   :name: system
+   :name: sec-system
    System/Notifications
 
 .. toctree::
    :caption: Applets
-   :name: applets
+   :name: sec-applets
    Applets
