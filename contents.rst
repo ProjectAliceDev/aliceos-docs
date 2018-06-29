@@ -1,6 +1,4 @@
 .. toctree::
-   index
+   Index
    Notifications
    Applets
-      Applet-Structure
-      Applet-Manifest
