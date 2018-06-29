@@ -6,18 +6,24 @@ Doki: The Angel Returns*.
 
 
 .. toctree::
+   :maxdepth: 1
    :caption: Main
    :name: sec-main
+
    Getting Started
 
 
 .. toctree::
+   :maxdepth: 1
    :caption: System Core
    :name: sec-system
+
    System/Notifications
 
 
 .. toctree::
+   :maxdepth: 1
    :caption: Applets
    :name: sec-applets
+   
    Applets
