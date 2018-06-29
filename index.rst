@@ -56,6 +56,7 @@ starts or right before your ``splashscreen``.
 
 Organization
 ------------
+
 The documentation is organized like this:
 
 .. toctree::
@@ -63,12 +64,16 @@ The documentation is organized like this:
    :name: sec-main
    Index
 
+
 .. toctree::
    :caption: System Core
    :name: sec-system
    System/Notifications
 
+
 .. toctree::
    :caption: Applets
    :name: sec-applets
    Applets
+
+
