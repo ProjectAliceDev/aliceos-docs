@@ -1,7 +1,3 @@
-.. raw:: html
-
-   <!--![AliceOS Logo](https://dokidokialice.marquiskurt.net/assets/img/aliceos_logo.png)-->
-
 Home
 ====
 
@@ -60,6 +56,12 @@ starts or right before your ``splashscreen``.
 
 Organization
 ------------
+The documentation is organized like this:
+
+.. toctree::
+   :caption: Main
+   :name: main
+   Index
 
 .. toctree::
    :caption: System Core
