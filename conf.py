@@ -6,7 +6,7 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
-master_doc = 'index'
+master_doc = 'contents'
 
 html_theme_options = {
     'logo_only': True,

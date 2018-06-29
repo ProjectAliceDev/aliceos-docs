@@ -1,18 +1,13 @@
-Home
-====
-
-Welcome to the official documentation for the AliceOS project. AliceOS
-is an independent, open-source project that brings a virtual operating
-system into Doki Doki Literature Club! as a mod and to Ren'Py projects
-as a framework. AliceOS is also the core operating system used in *Doki
-Doki: The Angel Returns*.
+Getting Started
+===============
 
 Download and installation
 -------------------------
 
-    Note: If you wish to use AliceOS on any Ren'Py project with a
-    different SDK version from 6.99.12.4, you might want to grab a copy
-    of the source code instead.
+.. attention:: Note: If you wish to use AliceOS on any Ren'Py project with a
+               different SDK version from 6.99.12.4, you might want to grab a copy
+               of the source code instead.
+
 
 There are two ways to handle the download and installation of AliceOS
 into any project.
@@ -57,26 +52,9 @@ The boot screens are labels with proper scenes. We recommend either
 adding this to the beginning of your ``script.rpy`` before the game
 starts or right before your ``splashscreen``.
 
-Organization
-------------
-
-The documentation is organized like this:
-
-.. toctree::
-   :caption: Main
-   :name: sec-main
-   Index
 
 
-.. toctree::
-   :caption: System Core
-   :name: sec-system
-   System/Notifications
 
 
-.. toctree::
-   :caption: Applets
-   :name: sec-applets
-   Applets
 
 
