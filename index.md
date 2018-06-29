@@ -14,9 +14,9 @@ There are two ways to handle the download and installation of AliceOS into any p
 3. Extract the contents of `AliceOS.SinglePackage.zip` into the game folder.
 
 ### Using the source code
-Downloading the source version of ALiceOS may prove useful if you are using a different version of the Ren'Py SDK or want to expand on AliceOS's capabilities for your needs.
+Downloading the source version of AliceOS may prove useful if you are using a different version of the Ren'Py SDK or want to expand on AliceOS's capabilities for your needs.
 
-1. Select the download for `Source code.zip` or `SOurce code.tar.gz`.
+1. Select the download for `Source code.zip` or `Source code.tar.gz`.
 2. Navigate to the `game` folder of your Ren'Py project.
 3. The following folders will need to be copied to the `game` folder: `Resources`, `CoreServices`, `Frameworks`, `Applets`.
 4. Run your Ren'Py project to compile the `.rpyc` versions of the files accordingly.
