@@ -1,4 +1,5 @@
 .. toctree::
-   Index
+   :glob:
+   Home
    System/Notifications
    Applets
