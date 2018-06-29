@@ -13,7 +13,7 @@ html_theme_options = {
     'display_version': False
 }
 
-html_logo = '_static/logo.png'
+html_logo = '_static/logo.svg'
 
 project = u'AliceOS'
 copyright = u'2018 AliceOS Developers'
