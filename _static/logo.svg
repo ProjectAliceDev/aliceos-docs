@@ -30,7 +30,7 @@
      inkscape:cx="954.47876"
      inkscape:cy="177.14286"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="flowRoot3353"
      showgrid="false"
      units="px"
      showborder="true"
@@ -79,19 +79,40 @@
            x="5.7142859"
            y="11.428572"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:640px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'" /></flowRegion><flowPara
-         id="flowPara3351">Ali</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3353"
+         id="flowPara3351">Ali</flowPara></flowRoot>    <g
+       transform="translate(425.71429,600.93359)"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(425.71429,600.93359)"><flowRegion
-         id="flowRegion3355"><rect
-           id="rect3357"
-           width="1980"
-           height="594.28571"
-           x="8.5714283"
-           y="11.428572" /></flowRegion><flowPara
-         id="flowPara3359"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'">AliceOS</flowPara></flowRoot>    <image
+       id="flowRoot3353">
+      <path
+         d="m 216.73727,340.87419 -100.33,-0.395 -25.280004,62.805 -79,-32.39 129.560004,-264.255 79,0.79 92.825,280.45 -79,18.96 -17.775,-65.965 z m -21.33,-79 -18.96,-71.1 -28.44,70.705 47.4,0.395 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3454" />
+      <path
+         d="m 444.63375,396.96419 q -29.625,13.035 -55.695,13.035 -35.945,0 -58.065,-23.305 -22.12,-23.305 -21.725,-65.57 l 0.79,-194.34 74.655,-22.12 0.395,194.34 q 0,16.195 8.69,24.095 8.69,7.505 20.145,7.505 8.295,0 13.43,-3.555 l 17.38,69.915 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3456" />
+      <path
+         d="m 489.62055,181.29419 q -11.455,0 -22.515,-5.925 -10.665,-6.32 -17.775,-16.985 -6.715,-10.665 -6.715,-22.91 0,-18.96 14.22,-31.6 14.615,-12.639997 34.76,-12.639997 18.96,0 30.415,11.454997 11.85,11.455 11.85,30.415 0,20.935 -12.64,34.76 -12.64,13.43 -31.6,13.43 z m -43.055,15.01 82.555,0 0,209.35 -76.235,0 -6.32,-209.35 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3458" />
+      <path
+         d="m 646.11461,409.60419 q -28.835,0 -53.72,-15.01 -24.885,-15.405 -39.5,-40.685 -14.615,-25.675 -14.615,-54.905 0,-29.23 13.825,-53.325 14.22,-24.49 37.92,-38.71 24.095,-14.22 52.93,-14.22 25.675,0 50.165,11.85 24.885,11.85 40.29,31.995 15.405,20.145 15.405,43.45 l -66.36,5.925 q -3.555,-11.455 -13.035,-18.17 -9.085,-7.11 -20.54,-7.11 -15.8,0 -28.44,11.85 -12.245,11.455 -12.245,26.465 0,9.875 5.925,19.355 5.925,9.48 15.405,15.405 9.875,5.925 20.145,5.925 10.27,0 19.355,-5.925 9.48,-5.925 13.43,-15.01 l 65.57,6.32 q 0,21.725 -15.01,41.475 -14.615,19.355 -38.315,31.205 -23.7,11.85 -48.585,11.85 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3460" />
+      <path
+         d="m 858.23578,194.72419 q 49.375,0 76.63,28.835 27.255,28.835 27.255,78.605 0,8.295 -0.395,12.64 l -139.83,1.58 q 4.74,13.035 13.035,21.725 8.69,8.295 20.145,9.085 31.6,2.37 45.82,-18.565 l 56.485,16.195 q -5.135,18.565 -19.75,33.575 -14.615,14.615 -35.155,22.91 -20.145,8.295 -41.87,8.295 -5.135,0 -7.9,-0.395 -27.255,-1.975 -50.56,-17.775 -22.91,-15.8 -36.735,-41.475 -13.43,-25.675 -13.43,-56.09 0,-5.925 0.395,-9.085 1.58,-26.07 15.8,-46.61 14.615,-20.54 37.92,-31.995 23.7,-11.455 52.14,-11.455 z m 3.95,48.98 q -29.23,-2.37 -39.895,24.49 l 66.755,0.395 q -1.58,-11.455 -9.48,-17.775 -7.505,-6.32 -17.38,-7.11 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3462" />
+      <path
+         d="m 1129.0268,409.60419 q -40.685,0 -76.63,-21.33 -35.945,-21.725 -57.67,-56.88 -21.33,-35.55 -21.33,-75.445 0,-39.895 21.33,-74.655 21.725,-35.155 57.67,-55.695 35.945,-20.935 76.63,-20.935 40.29,0 75.84,20.935 35.55,20.54 56.485,55.3 21.33,34.76 21.33,75.05 0,40.685 -21.33,76.235 -20.935,35.155 -56.485,56.485 -35.55,20.935 -75.84,20.935 z m -2.37,-79 q 20.935,0 38.315,-9.875 17.775,-9.875 28.045,-26.86 10.665,-16.985 10.665,-37.92 0,-20.54 -10.665,-37.13 -10.27,-16.59 -28.045,-25.675 -17.775,-9.48 -39.5,-9.48 -20.54,0 -37.525,9.48 -16.59,9.085 -26.07,25.675 -9.48,16.195 -9.48,36.735 0,21.33 9.48,38.71 9.875,16.985 26.465,26.86 16.985,9.48 38.315,9.48 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3464" />
+      <path
+         d="m 1391.1957,409.99919 q -32.39,0 -64.385,-13.825 -31.995,-14.22 -52.535,-37.525 l 53.325,-58.46 q 12.64,14.22 29.625,22.515 17.38,7.9 34.76,7.9 15.8,0 25.675,-5.925 9.875,-5.925 9.875,-13.825 0,-7.9 -9.48,-11.455 -9.48,-3.555 -24.49,-3.555 -29.23,0 -54.115,-12.245 -24.49,-12.245 -39.5,-33.575 -14.615,-21.725 -14.615,-48.585 0,-27.65 15.405,-49.77 15.405,-22.12 41.475,-34.76 26.07,-12.64 56.88,-12.64 31.205,0 60.83,12.245 29.625,11.85 52.14,34.365 l -44.635,60.435 q -37.13,-27.255 -70.31,-27.255 -14.615,0 -25.28,5.135 -10.665,5.135 -10.665,12.245 0,7.505 12.64,11.455 12.64,3.555 30.02,3.555 31.6,0 56.485,9.875 24.885,9.875 39.105,29.23 14.22,19.355 14.22,47.005 0,29.625 -16.985,54.51 -16.59,24.49 -44.635,38.71 -28.045,14.22 -60.83,14.22 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:395px;font-family:'Riffic Free';-inkscape-font-specification:'Riffic Free Bold'"
+         id="path3466" />
+    </g>
+    <image
        y="665.36218"
        x="12.428624"
        id="image3450"
