@@ -7,8 +7,8 @@ contains screens for both the native and custom functions regarding
 dialog and notification management. This document will cover the screens
 themselves rather than the Applet functions to make use of them.
 
-..tip:: If you commonly use a particular notification, you may want to
-        wrap your call statement in a label:
+.. tip:: If you commonly use a particular notification, you may want to
+         wrap your call statement in a label:
 
 .. code::
 
