@@ -6,14 +6,17 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
+master_doc = 'index'
+
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+    'display_version': False
 }
 
 html_logo = '_static/logo.png'
 
 project = u'AliceOS'
-copyright = u'2018 AliceOS Developers'  # pylint: disable=redefined-builtin
+copyright = u'2018 AliceOS Developers'
 author = u'AliceOS Developers'
 
 def setup(app):
