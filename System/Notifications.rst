@@ -10,11 +10,13 @@ themselves rather than the Applet functions to make use of them.
 .. tip:: If you commonly use a particular notification, you may want to
          wrap your call statement in a label:
 
-.. code::
+         .. code::
 
-    label test_alert:
-        call screen alert("This is an alert", "Press OK to dismiss this alert.", ok_action=Return())
-        return
+            label test_alert:
+                call screen alert("This is an alert", "Press OK to dismiss this alert.", ok_action=Return())
+                return
+
+
 
 Types of notifications
 ----------------------
