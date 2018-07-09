@@ -1,0 +1,23 @@
+site_logo_url: https://theangelreturns.github.io/pendle/assets/img/logomark.svg
+
+navigation:
+    - title: Welcome
+    - children:
+      - title: Getting started
+        location: index.md
+    
+    - title: AliceOS System
+      children:
+
+        - location: system/notifications.md
+          title: Notifications
+    
+    - title: Applets
+      children:
+
+      - location: applets/basics.md
+        title: Applet basics
+
+      - location: applets/renpy.md
+        title: Ren'Py applet
+      
