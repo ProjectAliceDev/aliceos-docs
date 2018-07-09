@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Applet Basics | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Mono|Comfortaa');
@@ -58,6 +58,10 @@
         color: white;
         font-family: 'Comfortaa', Arial, sans-serif;
       }
+
+      .p-sidebar-nav__item.first-level strong {
+        font-family: 'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+      }
       /* --- */
 
       /* Backwards compatibility for docs with no nav logo */
@@ -94,8 +98,8 @@
         <header id="navigation" class="p-navigation">
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
-              <a class="p-navigation__link" href="https://docs.aliceos.app">
-                <img class="p-navigation__image" src="https://theangelreturns.github.io/pendle/assets/img/logomark.svg" alt=" logo">docs
+              <a class="p-navigation__link" href="/">
+                <img class="p-navigation__image" src="../media/img/logomark.svg" alt=" logo">docs
               </a>
             </div>
           </div>
@@ -118,7 +122,7 @@
               <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search"></i></button>
             </form>
             <nav class="p-sidebar-nav">
-                <ul class="p-sidebar-nav__list">
+                <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
                   
                   <li class="p-sidebar-nav__item first-level">
                     
@@ -160,6 +164,19 @@
                       
                         <li class="p-sidebar-nav__item">
                           
+                            <a class="p-link--soft" href="../system/bootloader.html">
+                          
+                          
+                            Boot screens
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
+                        <li class="p-sidebar-nav__item">
+                          
                             <a class="p-link--soft" href="../system/notifications.html">
                           
                           
@@ -197,6 +214,19 @@
                       
                         <li class="p-sidebar-nav__item">
                           
+                            <a class="p-link--soft" href="security.html">
+                          
+                          
+                            Applet security
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
+                        <li class="p-sidebar-nav__item">
+                          
                             <a class="p-link--soft" href="renpy.html">
                           
                           
@@ -213,6 +243,45 @@
                   </li>
                   
                 </ul>
+                <ul class="p-sidebar-nav__list u-hide" id="docs-list-sorted">
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../index.html">Getting started</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="security.html">Applet security</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                        
+                      </li>
+                    
+                  </ul>
               </nav>
           </div>
         </aside>
@@ -221,7 +290,9 @@
             
             <div class="p-strip is-shallow">
               <div class="p-content__row">
-                  <h1 id="applet-basics">Applet Basics<a class="anchor" href="#applet-basics"></a></h1>
+                <div class = "row">
+                  <div class = "col-8">
+                    <h1 id="applet-basics">Applet Basics<a class="anchor" href="#applet-basics"></a></h1>
 <p>Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. Thye usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.</p>
 <h2 id="applet-template">Applet Template<a class="anchor" href="#applet-template"></a></h2>
 <p>The <a href="https://github.com/TheAngelReturns/aliceos-applet">Applet Template</a> provided by the AliceOS Team provides a structure that can be followed to create a working Applet with proper manifest data. Aspiring AliceOS applet developers should start with the template before creating their own classes and applets from scratch.</p>
@@ -275,7 +346,7 @@ icons = {
 </code></pre>
 
 <h4 id="setting-app-permissions">Setting App Permissions<a class="anchor" href="#setting-app-permissions"></a></h4>
-<p>AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called <code>permissions</code>. When the user verifies these permissions, they are either stored in the <code>persistent</code> file of your Ren'Py game.</p>
+<p>AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called <code>permissions</code>. When the user verifies these permissions, they are either stored in the <code>persistent</code> file of your Ren'Py game. More information on applet security can be found in the <a href="security.html">Applet security documentation page</a>.</p>
 <ul>
 <li><code>pm_notify</code> - Send notifications to the user</li>
 <li><code>pm_files</code> - Access the file system outside of the user's Home
@@ -288,6 +359,7 @@ icons = {
 <li><code>ask_app_permissions()</code> - Overtly asks the user permission for the specified items in the <code>permissions</code> list.</li>
 <li><code>send_temporary_notification(sender, contents, action)</code> - Sends a banner notification built upon the <code>banner()</code> screen.</li>
 </ul>
+                </div>
               </div>
             </div>
             
@@ -299,7 +371,7 @@ icons = {
                   <ul class="p-inline-list--middot">
 
                     <li class="p-inline-list__item">
-                      <a href="https://github.com/theangelreturns/pendle-docs/issues/new">Report a bug with this site</a>
+                      <a href="https://github.com/theangelreturns/aliceos-docs/issues/new">Report a bug with this site</a>
                     </li>
                     <li class="p-inline-list__item">
                       <a href="https://github.com/vanilla-framework/vanilla-framework/issues/new">Report a bug with Vanilla framework</a>

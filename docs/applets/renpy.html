@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Ren'Py Applet | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="" type="image/x-icon" />
+    <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Mono|Comfortaa');
@@ -58,6 +58,10 @@
         color: white;
         font-family: 'Comfortaa', Arial, sans-serif;
       }
+
+      .p-sidebar-nav__item.first-level strong {
+        font-family: 'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+      }
       /* --- */
 
       /* Backwards compatibility for docs with no nav logo */
@@ -94,8 +98,8 @@
         <header id="navigation" class="p-navigation">
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
-              <a class="p-navigation__link" href="https://docs.aliceos.app">
-                <img class="p-navigation__image" src="https://theangelreturns.github.io/pendle/assets/img/logomark.svg" alt=" logo">docs
+              <a class="p-navigation__link" href="/">
+                <img class="p-navigation__image" src="../media/img/logomark.svg" alt=" logo">docs
               </a>
             </div>
           </div>
@@ -118,7 +122,7 @@
               <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search"></i></button>
             </form>
             <nav class="p-sidebar-nav">
-                <ul class="p-sidebar-nav__list">
+                <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
                   
                   <li class="p-sidebar-nav__item first-level">
                     
@@ -160,6 +164,19 @@
                       
                         <li class="p-sidebar-nav__item">
                           
+                            <a class="p-link--soft" href="../system/bootloader.html">
+                          
+                          
+                            Boot screens
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
+                        <li class="p-sidebar-nav__item">
+                          
                             <a class="p-link--soft" href="../system/notifications.html">
                           
                           
@@ -197,6 +214,19 @@
                       
                         <li class="p-sidebar-nav__item">
                           
+                            <a class="p-link--soft" href="security.html">
+                          
+                          
+                            Applet security
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
+                        <li class="p-sidebar-nav__item">
+                          
                             <a class="p-link--soft is-active" href="renpy.html">
                           
                           
@@ -213,6 +243,45 @@
                   </li>
                   
                 </ul>
+                <ul class="p-sidebar-nav__list u-hide" id="docs-list-sorted">
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../index.html">Getting started</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="security.html">Applet security</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                        
+                      </li>
+                    
+                  </ul>
               </nav>
           </div>
         </aside>
@@ -221,7 +290,9 @@
             
             <div class="p-strip is-shallow">
               <div class="p-content__row">
-                  <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
+                <div class = "row">
+                  <div class = "col-8">
+                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
 <p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
 <h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
 <ul>
@@ -232,6 +303,7 @@
 <li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
 <li><code>description</code> - Uses <code>gui.about</code></li>
 </ul>
+                </div>
               </div>
             </div>
             
@@ -243,7 +315,7 @@
                   <ul class="p-inline-list--middot">
 
                     <li class="p-inline-list__item">
-                      <a href="https://github.com/theangelreturns/pendle-docs/issues/new">Report a bug with this site</a>
+                      <a href="https://github.com/theangelreturns/aliceos-docs/issues/new">Report a bug with this site</a>
                     </li>
                     <li class="p-inline-list__item">
                       <a href="https://github.com/vanilla-framework/vanilla-framework/issues/new">Report a bug with Vanilla framework</a>

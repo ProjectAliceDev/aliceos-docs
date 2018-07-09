@@ -3,8 +3,8 @@ title: AliceOS Docs
 homepage: true
 ---
 
-<div class="p-strip--image is-dark" style="background-image: url('https://assets.ubuntu.com/v1/a328d904-MAAS-background-desktop-large-screen.png')">
-    <div class="p-content__row">
+<div class="p-strip--image is-dark" style="background-image: url('../media/img/trianglify.svg')">
+    <div class="p-content__row shadow">
         <div class="col-8">
             <h1>AliceOS Documentation</h1>
             <p>AliceOS is an independent, open-source project that brings a virtual operating system into Doki Doki Literature Club! as a mod and to Ren'Py projects as a framework. AliceOS is also the core operating system used in Doki Doki: The Angel Returns.</p>
@@ -55,22 +55,23 @@ git clone https://github.com/TheAngelReturns/aliceos.git
                 <h2>Getting support</h2>
                 <ul class="p-list">
                     <li class="p-list__item">
-                        <i class="p-icon" style="background-image:url('https://assets.ubuntu.com/v1/d3ae9c8e-irc-icon-circle.svg');
-                        height:1.5rem;width: 1.5rem;top: 2px;margin-right:.5rem;"></i>
                         <a class="p-link--external" href="https://discord.gg/tdvNzjW">Discord</a>
+                    </li>
+                    <li class="p-list__item">
+                        <a class="p-link--external" href="https://reddit.com/r/TheAngelReturns">Reddit</a>
                     </li>
                 </ul>
             </div>
-            <!-- <div class="col-6">
+            <div class="col-6">
                 <h2>Contribute</h2>
                 <ul class="p-list">
-                    <li class="p-list__item"><a class="p-link--external" href="#">Contributing guides</a></li>
-                    <li class="p-list__item--deep"><a class="p-link--external" href="#">Ways you can contribute</a></li>
-                    <li class="p-list__item"><a class="p-link--external" href="#">Push some code</a></li>
-                    <li class="p-list__item--deep"><a class="p-link--external" href="#">File an issue</a></li>
-                    <li class="p-list__item"><a class="p-link--external" href="#">Write some docs</a></li>
+                    <!--<li class="p-list__item"><a class="p-link--external" href="#">Contributing guides</a></li>
+                    <li class="p-list__item--deep"><a class="p-link--external" href="#">Ways you can contribute</a></li>-->
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos">Push some code</a></li>
+                    <li class="p-list__item--deep"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos/issues/new">File an issue</a></li>
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos-docs">Write some docs</a></li>
                 </ul>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

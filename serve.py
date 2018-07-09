@@ -27,7 +27,6 @@ def run_build():
         "Something went wrong. Are you sure that you have the right files?"
 
 def start_serve(action):
-    os.system("clear")
     if action == "build-only":
         run_build()
         print "Build completed."
@@ -42,7 +41,7 @@ def start_serve(action):
             os.system("python -m SimpleHTTPServer")
         else:
             print "There's no build directory, silly."
-
+        os.system("clear")
         print "All done!"
         print "Make sure the docs folder remains when you push to GitHub!"
     else:

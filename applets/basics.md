@@ -73,7 +73,7 @@ icons = {
 
 #### Setting App Permissions
 
-AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called `permissions`. When the user verifies these permissions, they are either stored in the `persistent` file of your Ren'Py game.
+AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called `permissions`. When the user verifies these permissions, they are either stored in the `persistent` file of your Ren'Py game. More information on applet security can be found in the [Applet security documentation page](security.md).
 
 -   `pm_notify` - Send notifications to the user
 -   `pm_files` - Access the file system outside of the user's Home

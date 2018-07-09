@@ -66,6 +66,10 @@
         color: white;
         font-family: 'Comfortaa', Arial, sans-serif;
       }
+
+      .p-sidebar-nav__item.first-level strong {
+        font-family: 'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+      }
       /* --- */
 
       /* Backwards compatibility for docs with no nav logo */
@@ -177,7 +181,7 @@
               <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search"></i></button>
             </form>
             <nav class="p-sidebar-nav">
-                <ul class="p-sidebar-nav__list">
+                <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
                   {% for item in navigation %}
                   <li class="p-sidebar-nav__item first-level">
                     {% if item.location %}
@@ -222,6 +226,17 @@
                   </li>
                   {% endfor %}
                 </ul>
+                <ul class="p-sidebar-nav__list u-hide" id="docs-list-sorted">
+                    {% for item in navigation %}{% for child in item.children %}
+                      <li class="p-sidebar-nav__item">
+                        {% if child.location %}
+                          <a class="p-link--soft" href="{{ child.location }}">{{ child.title }}</a>
+                        {% else %}
+                          {{ child.title }}
+                        {% endif %}
+                      </li>
+                    {% endfor %}{% endfor %}
+                  </ul>
               </nav>
           </div>
         </aside>
@@ -232,7 +247,10 @@
             {% else %}
             <div class="p-strip is-shallow">
               <div class="p-content__row">
-                  {{ content }}
+                <div class = "row">
+                  <div class = "col-8">
+                    {{ content }}
+                </div>
               </div>
             </div>
             {% endif %}
@@ -244,7 +262,7 @@
                   <ul class="p-inline-list--middot">
 
                     <li class="p-inline-list__item">
-                      <a href="https://github.com/theangelreturns/pendle-docs/issues/new">Report a bug with this site</a>
+                      <a href="https://github.com/theangelreturns/aliceos-docs/issues/new">Report a bug with this site</a>
                     </li>
                     <li class="p-inline-list__item">
                       <a href="https://github.com/vanilla-framework/vanilla-framework/issues/new">Report a bug with Vanilla framework</a>
