@@ -11,7 +11,7 @@ else:
 
 print "Building documentation with documentation-builder..."
 try:
-    os.system("documentation-builder --template template.html")
+    os.system("documentation-builder --template template.html --output-path ./docs")
 except:
     print "Something went wrong. Are you sure you have documentation-builder installed?"
 
