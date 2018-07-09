@@ -5,7 +5,7 @@ Notifications
 =============
 
 Notifications provide a level of interactivity and information updates for your Ren'Py project. The notification system built into AliceOS contains screens for both the native and custom functions regarding dialog and notification management. This document will cover the screens themselves rather than the Applet functions to make use of them.
-<div class="p-notification--caution">
+<div class="p-notification--information">
   <p class="p-notification__response">
     <span class="p-notification__status">Tip:</span>If you commonly use a particular notification, you may want to wrap your call statement in a label.
   </p>
@@ -35,7 +35,7 @@ Presents an alert to the user that requires an action.
 call screen alert("File Not Found", "The file specified could not be found.", ok_action=Return(1))
 </code></pre>
 
-<div class="p-notification--caution">
+<div class="p-notification--information">
   <p class="p-notification__response">
     <span class="p-notification__status">Note:</span>If you need the user to make a decision, using the confirmation alert may be more beneficial.
   </p>
@@ -103,7 +103,7 @@ Presents a temporary banner at the top of the screen. Automatically dismisses af
 -   `message` - the message or details
 -   `response` - function called when the user presses Respond
 
-<div class="p-notification--caution">
+<div class="p-notification--information">
   <p class="p-notification__response">
     <span class="p-notification__status">Note:</span>If you need something "quick n' dirty", you can also make use of <code>renpy.notify()</code>; however,you won't have the same control as <code>banner()</code>.
   </p>
