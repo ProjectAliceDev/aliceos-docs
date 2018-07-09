@@ -1,34 +1,25 @@
+---
+title: Notifications
+---
 Notifications
 =============
 
-Notifications provide a level of interactivity and information updates
-for your Ren'Py project. The notification system built into AliceOS
-contains screens for both the native and custom functions regarding
-dialog and notification management. This document will cover the screens
-themselves rather than the Applet functions to make use of them.
+Notifications provide a level of interactivity and information updates for your Ren'Py project. The notification system built into AliceOS contains screens for both the native and custom functions regarding dialog and notification management. This document will cover the screens themselves rather than the Applet functions to make use of them.
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Tip:</span>If you commonly use a particular notification, you may want to wrap your call statement in a label.
+  </p>
+</div>
 
-> **tip**
->
-> If you commonly use a particular notification, you may want to
->
-> :   wrap your call statement in a label:
->
-> ``` {.sourceCode .}
-> label test_alert:
->     call screen alert("This is an alert", "Press OK to dismiss this alert.", ok_action=Return())
->     return
-> ```
 
 Types of notifications
 ----------------------
 
-There are multiple types of notifications that take inspiration from the
-way notifications are handled on iOS.
+There are multiple types of notifications that take inspiration from the way notifications are handled on iOS.
 
 ### Alerts
 
-*Alerts* provide a message that requires an action, usually by pushing a
-button. They can be terse or have details with a title and message.
+*Alerts* provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.
 
 ![Alerts](https://imgur.com/lGlEmZu.png)
 
@@ -40,16 +31,16 @@ Presents an alert to the user that requires an action.
 -   `message` - the details or relevant information
 -   `ok_action` - the function called when user presses OK
 
-``` {.sourceCode .}
+<pre><code class = "prettyprint lang-py">
 call screen alert("File Not Found", "The file specified could not be found.", ok_action=Return(1))
-```
+</code></pre>
 
-> **note**
->
-> If you need the user to make a decision, using the *confirmation alert*
->
-> :   may be more beneficial.
->
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>If you need the user to make a decision, using the confirmation alert may be more beneficial.
+  </p>
+</div>
+
 ### Confirmation Alerts
 
 `confirm_alert(title, message, no_action_message, no_action, yes_action_message, yes_action)`
@@ -63,23 +54,19 @@ Presents an alert that requires the user to make a choice.
 -   `yes_action_message` - the positive button's text (placed on right)
 -   `yes_action` - the function called when user presses positive button
 
-> **important**
->
-> If you are asking the user permission to perform a function, use
->
-> :   `ask_permission` instead.
->
-``` {.sourceCode .}
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Important:</span>If you need to ask the user permission for common applet tasks, use <code>ask_permission</code> instead.
+  </p>
+</div>
+
+<pre><code class = "prettyprint lang-py">
 call screen confirm_alert("Do You Want To Run Alice32?", "Running this software may harm the AliceOS system.", "Don't Run", no_action=Return(1), "Run Anyway", yes_action=Return(0))
-```
+</code></pre>
 
 ### Permissive Alerts
 
-*Permissive alerts* are alerts that require the player to grant access
-to parts of the AliceOS system. These usually include sending
-notifications, modifying the file system, and changing system settings.
-Applets have a native function for asking all of its permissions
-accordingly: `ask_all_permissions()`.
+*Permissive alerts* are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: `ask_all_permissions()`.
 
 ![Permissive Alerts](https://imgur.com/quWQALX.png)
 
@@ -97,35 +84,31 @@ system-related function.
 -   `no_action` - function called when user presses Don't Allow
 -   `yes_action` - function called when user presses OK
 
-``` {.sourceCode .}
+<pre><code class = "prettyprint lang-py">
 call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))
-```
+</code></pre>
 
 ### Banners
 
-*Banners* provide a temporary pop-up at the top of the screen that has
-the option for a response before hiding itself after five seconds.
-Applets have a native function for doing this without needing to use the
-screen directly: `send_temporary_notification()`.
+*Banners* provide a temporary pop-up at the top of the screen that has the option for a response before hiding itself after five seconds. Applets have a native function for doing this without needing to use the screen directly: `send_temporary_notification()`.
 
 ![Banners](https://imgur.com/kKpx6ji.png)
 
 `banner(applet, title, message, response)`
 
-Presents a temporary banner at the top of the screen. Automatically
-dismisses after five seconds and returns a value of `0`.
+Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of `0`.
 
 -   `applet` - the applet sending the notification
 -   `title` - either the sender or the main message
 -   `message` - the message or details
 -   `response` - function called when the user presses Respond
 
-> **note**
->
-> If you need something "quick n' dirty", you can also make use of `renpy.notify()`; however,
->
-> :   you won't have the same control as `banner()`.
->
-``` {.sourceCode .}
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>If you need something "quick n' dirty", you can also make use of <code>renpy.notify()</code>; however,you won't have the same control as <code>banner()</code>.
+  </p>
+</div>
+
+<pre><code class = "prettyprint lang-py">
 call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
-```
+</code></pre>

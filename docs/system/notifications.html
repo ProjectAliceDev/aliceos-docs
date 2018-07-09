@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title> | Documentation</title>
+    <title>Notifications | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
@@ -222,30 +222,16 @@
             <div class="p-strip is-shallow">
               <div class="p-content__row">
                   <h1 id="notifications">Notifications<a class="anchor" href="#notifications"></a></h1>
-<p>Notifications provide a level of interactivity and information updates
-for your Ren'Py project. The notification system built into AliceOS
-contains screens for both the native and custom functions regarding
-dialog and notification management. This document will cover the screens
-themselves rather than the Applet functions to make use of them.</p>
-<blockquote>
-<p><strong>tip</strong></p>
-<dl>
-<dt>If you commonly use a particular notification, you may want to</dt>
-<dd>
-<p>wrap your call statement in a label:</p>
-</dd>
-</dl>
-<p><code>{.sourceCode .}
-label test_alert:
-    call screen alert("This is an alert", "Press OK to dismiss this alert.", ok_action=Return())
-    return</code></p>
-</blockquote>
+<p>Notifications provide a level of interactivity and information updates for your Ren'Py project. The notification system built into AliceOS contains screens for both the native and custom functions regarding dialog and notification management. This document will cover the screens themselves rather than the Applet functions to make use of them.
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Tip:</span>If you commonly use a particular notification, you may want to wrap your call statement in a label.
+  </p>
+</div></p>
 <h2 id="types-of-notifications">Types of notifications<a class="anchor" href="#types-of-notifications"></a></h2>
-<p>There are multiple types of notifications that take inspiration from the
-way notifications are handled on iOS.</p>
+<p>There are multiple types of notifications that take inspiration from the way notifications are handled on iOS.</p>
 <h3 id="alerts">Alerts<a class="anchor" href="#alerts"></a></h3>
-<p><em>Alerts</em> provide a message that requires an action, usually by pushing a
-button. They can be terse or have details with a title and message.</p>
+<p><em>Alerts</em> provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.</p>
 <p><img alt="Alerts" src="https://imgur.com/lGlEmZu.png" /></p>
 <p><code>alert(title, message, ok_action)</code></p>
 <p>Presents an alert to the user that requires an action.</p>
@@ -254,44 +240,39 @@ button. They can be terse or have details with a title and message.</p>
 <li><code>message</code> - the details or relevant information</li>
 <li><code>ok_action</code> - the function called when user presses OK</li>
 </ul>
-<p>``` {.sourceCode .}
-call screen alert("File Not Found", "The file specified could not be found.", ok_action=Return(1))</p>
-<div class="codehilite"><pre><span></span>&gt; **note**
-&gt;
-&gt; If you need the user to make a decision, using the *confirmation alert*
-&gt;
-&gt; :   may be more beneficial.
-&gt;
-### Confirmation Alerts
+<pre><code class = "prettyprint lang-py">
+call screen alert("File Not Found", "The file specified could not be found.", ok_action=Return(1))
+</code></pre>
 
-`confirm_alert(title, message, no_action_message, no_action, yes_action_message, yes_action)`
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>If you need the user to make a decision, using the confirmation alert may be more beneficial.
+  </p>
+</div>
 
-Presents an alert that requires the user to make a choice.
+<h3 id="confirmation-alerts">Confirmation Alerts<a class="anchor" href="#confirmation-alerts"></a></h3>
+<p><code>confirm_alert(title, message, no_action_message, no_action, yes_action_message, yes_action)</code></p>
+<p>Presents an alert that requires the user to make a choice.</p>
+<ul>
+<li><code>title</code> - the main choice text</li>
+<li><code>subtitle</code> - the details or relevant information to the choice</li>
+<li><code>no_action_message</code> - the negative button's text (placed on left)</li>
+<li><code>no_action</code> - the function called when user presses negative button</li>
+<li><code>yes_action_message</code> - the positive button's text (placed on right)</li>
+<li><code>yes_action</code> - the function called when user presses positive button</li>
+</ul>
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Important:</span>If you need to ask the user permission for common applet tasks, use <code>ask_permission</code> instead.
+  </p>
+</div>
 
--   `title` - the main choice text
--   `subtitle` - the details or relevant information to the choice
--   `no_action_message` - the negative button&#39;s text (placed on left)
--   `no_action` - the function called when user presses negative button
--   `yes_action_message` - the positive button&#39;s text (placed on right)
--   `yes_action` - the function called when user presses positive button
-
-&gt; **important**
-&gt;
-&gt; If you are asking the user permission to perform a function, use
-&gt;
-&gt; :   `ask_permission` instead.
-&gt;
-``` {.sourceCode .}
-call screen confirm_alert(&quot;Do You Want To Run Alice32?&quot;, &quot;Running this software may harm the AliceOS system.&quot;, &quot;Don&#39;t Run&quot;, no_action=Return(1), &quot;Run Anyway&quot;, yes_action=Return(0))
-</pre></div>
-
+<pre><code class = "prettyprint lang-py">
+call screen confirm_alert("Do You Want To Run Alice32?", "Running this software may harm the AliceOS system.", "Don't Run", no_action=Return(1), "Run Anyway", yes_action=Return(0))
+</code></pre>
 
 <h3 id="permissive-alerts">Permissive Alerts<a class="anchor" href="#permissive-alerts"></a></h3>
-<p><em>Permissive alerts</em> are alerts that require the player to grant access
-to parts of the AliceOS system. These usually include sending
-notifications, modifying the file system, and changing system settings.
-Applets have a native function for asking all of its permissions
-accordingly: <code>ask_all_permissions()</code>.</p>
+<p><em>Permissive alerts</em> are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: <code>ask_all_permissions()</code>.</p>
 <p><img alt="Permissive Alerts" src="https://imgur.com/quWQALX.png" /></p>
 <p><code>ask_permission(applet.long_name, action, no_action, yes_action)</code></p>
 <p>Asks the user permission to perform an action or to access a
@@ -306,36 +287,30 @@ system-related function.</p>
 <li><code>no_action</code> - function called when user presses Don't Allow</li>
 <li><code>yes_action</code> - function called when user presses OK</li>
 </ul>
-<p>``` {.sourceCode .}
-call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))</p>
-<div class="codehilite"><pre><span></span>### Banners
+<pre><code class = "prettyprint lang-py">
+call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))
+</code></pre>
 
-*Banners* provide a temporary pop-up at the top of the screen that has
-the option for a response before hiding itself after five seconds.
-Applets have a native function for doing this without needing to use the
-screen directly: `send_temporary_notification()`.
+<h3 id="banners">Banners<a class="anchor" href="#banners"></a></h3>
+<p><em>Banners</em> provide a temporary pop-up at the top of the screen that has the option for a response before hiding itself after five seconds. Applets have a native function for doing this without needing to use the screen directly: <code>send_temporary_notification()</code>.</p>
+<p><img alt="Banners" src="https://imgur.com/kKpx6ji.png" /></p>
+<p><code>banner(applet, title, message, response)</code></p>
+<p>Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of <code>0</code>.</p>
+<ul>
+<li><code>applet</code> - the applet sending the notification</li>
+<li><code>title</code> - either the sender or the main message</li>
+<li><code>message</code> - the message or details</li>
+<li><code>response</code> - function called when the user presses Respond</li>
+</ul>
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>If you need something "quick n' dirty", you can also make use of <code>renpy.notify()</code>; however,you won't have the same control as <code>banner()</code>.
+  </p>
+</div>
 
-![Banners](https://imgur.com/kKpx6ji.png)
-
-`banner(applet, title, message, response)`
-
-Presents a temporary banner at the top of the screen. Automatically
-dismisses after five seconds and returns a value of `0`.
-
--   `applet` - the applet sending the notification
--   `title` - either the sender or the main message
--   `message` - the message or details
--   `response` - function called when the user presses Respond
-
-&gt; **note**
-&gt;
-&gt; If you need something &quot;quick n&#39; dirty&quot;, you can also make use of `renpy.notify()`; however,
-&gt;
-&gt; :   you won&#39;t have the same control as `banner()`.
-&gt;
-``` {.sourceCode .}
-call screen banner(ddlc, &quot;New character added!&quot;, &quot;Monika&#39;s now in the game.&quot;, response=Return(1))
-</pre></div>
+<pre><code class = "prettyprint lang-py">
+call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
+</code></pre>
               </div>
             </div>
             
@@ -365,5 +340,6 @@ call screen banner(ddlc, &quot;New character added!&quot;, &quot;Monika&#39;s no
       </div>
       <script src="/media/js/scripts.js"></script>
       <script src="https://assets.ubuntu.com/v1/24ef513e-example-1.1.0.js"></script>
+      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   </body>
 </html>
