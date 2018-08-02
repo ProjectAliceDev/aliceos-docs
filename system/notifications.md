@@ -11,17 +11,11 @@ Notifications provide a level of interactivity and information updates for your 
   </p>
 </div>
 
-
-Types of notifications
-----------------------
-
-There are multiple types of notifications that take inspiration from the way notifications are handled on iOS.
-
-### Alerts
+## Alerts
 
 *Alerts* provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.
 
-![Alerts](https://imgur.com/lGlEmZu.png)
+![Alerts](../media/img/ns-alert.png)
 
 `alert(title, message, ok_action)`
 
@@ -41,7 +35,7 @@ call screen alert("File Not Found", "The file specified could not be found.", ok
   </p>
 </div>
 
-### Confirmation Alerts
+## Confirmation Alerts
 
 `confirm_alert(title, message, no_action_message, no_action, yes_action_message, yes_action)`
 
@@ -64,11 +58,11 @@ Presents an alert that requires the user to make a choice.
 call screen confirm_alert("Do You Want To Run Alice32?", "Running this software may harm the AliceOS system.", "Don't Run", no_action=Return(1), "Run Anyway", yes_action=Return(0))
 </code></pre>
 
-### Permissive Alerts
+## Permissive Alerts
 
 *Permissive alerts* are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: `ask_all_permissions()`.
 
-![Permissive Alerts](https://imgur.com/quWQALX.png)
+![Permissive Alerts](../media/img/ns-permalert.png)
 
 `ask_permission(applet.long_name, action, no_action, yes_action)`
 
@@ -88,11 +82,17 @@ system-related function.
 call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))
 </code></pre>
 
-### Banners
+## Banners
 
 *Banners* provide a temporary pop-up at the top of the screen that has the option for a response before hiding itself after five seconds. Applets have a native function for doing this without needing to use the screen directly: `send_temporary_notification()`.
 
-![Banners](https://imgur.com/kKpx6ji.png)
+<div class="p-notification--information">
+    <p class="p-notification__response">
+        <span class="p-notification__status">Note:</span>If you need to send a notification on the behalf of the <i>operating system</i>, use <code>SystemUIServer.send_temporary_notification()</code>.
+    </p>
+</div>
+
+![Banners](../media/img/ns-banner.png)
 
 `banner(applet, title, message, response)`
 

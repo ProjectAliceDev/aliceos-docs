@@ -17,6 +17,9 @@ navigation:
           
         - location: system/notifications.md
           title: Notifications
+
+        - location: system/rsods.md
+          title: Stop errors
     
     - title: Applets
       children:

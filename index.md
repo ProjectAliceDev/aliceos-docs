@@ -36,6 +36,7 @@ homepage: true
 git clone https://github.com/TheAngelReturns/aliceos.git
                     </pre></p>
                     <p>Open the Ren'Py launcher and click 'Distribute' and select 'AliceOS Installation' as the target platform. The result will create a new <code>AliceOS.rpa</code> file that can be dropped into your Ren'Py game.</p>
+                    <p>Alternatively, you can drop the AliceOS system folders and files directly into the game without copmiling it to an RPA.</p>
                 </div>
             </div>
         </div>

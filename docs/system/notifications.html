@@ -188,6 +188,19 @@
                           
                         </li>
                       
+                        <li class="p-sidebar-nav__item">
+                          
+                            <a class="p-link--soft" href="rsods.html">
+                          
+                          
+                            Stop errors
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
                     </ul>
                     
                   </li>
@@ -265,6 +278,12 @@
                     
                       <li class="p-sidebar-nav__item">
                         
+                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
                           <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
@@ -299,11 +318,9 @@
     <span class="p-notification__status">Tip:</span>If you commonly use a particular notification, you may want to wrap your call statement in a label.
   </p>
 </div></p>
-<h2 id="types-of-notifications">Types of notifications<a class="anchor" href="#types-of-notifications"></a></h2>
-<p>There are multiple types of notifications that take inspiration from the way notifications are handled on iOS.</p>
-<h3 id="alerts">Alerts<a class="anchor" href="#alerts"></a></h3>
+<h2 id="alerts">Alerts<a class="anchor" href="#alerts"></a></h2>
 <p><em>Alerts</em> provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.</p>
-<p><img alt="Alerts" src="https://imgur.com/lGlEmZu.png" /></p>
+<p><img alt="Alerts" src="../media/img/ns-alert.png" /></p>
 <p><code>alert(title, message, ok_action)</code></p>
 <p>Presents an alert to the user that requires an action.</p>
 <ul>
@@ -321,7 +338,7 @@ call screen alert("File Not Found", "The file specified could not be found.", ok
   </p>
 </div>
 
-<h3 id="confirmation-alerts">Confirmation Alerts<a class="anchor" href="#confirmation-alerts"></a></h3>
+<h2 id="confirmation-alerts">Confirmation Alerts<a class="anchor" href="#confirmation-alerts"></a></h2>
 <p><code>confirm_alert(title, message, no_action_message, no_action, yes_action_message, yes_action)</code></p>
 <p>Presents an alert that requires the user to make a choice.</p>
 <ul>
@@ -342,9 +359,9 @@ call screen alert("File Not Found", "The file specified could not be found.", ok
 call screen confirm_alert("Do You Want To Run Alice32?", "Running this software may harm the AliceOS system.", "Don't Run", no_action=Return(1), "Run Anyway", yes_action=Return(0))
 </code></pre>
 
-<h3 id="permissive-alerts">Permissive Alerts<a class="anchor" href="#permissive-alerts"></a></h3>
+<h2 id="permissive-alerts">Permissive Alerts<a class="anchor" href="#permissive-alerts"></a></h2>
 <p><em>Permissive alerts</em> are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: <code>ask_all_permissions()</code>.</p>
-<p><img alt="Permissive Alerts" src="https://imgur.com/quWQALX.png" /></p>
+<p><img alt="Permissive Alerts" src="../media/img/ns-permalert.png" /></p>
 <p><code>ask_permission(applet.long_name, action, no_action, yes_action)</code></p>
 <p>Asks the user permission to perform an action or to access a
 system-related function.</p>
@@ -362,9 +379,15 @@ system-related function.</p>
 call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_action=Return(0))
 </code></pre>
 
-<h3 id="banners">Banners<a class="anchor" href="#banners"></a></h3>
+<h2 id="banners">Banners<a class="anchor" href="#banners"></a></h2>
 <p><em>Banners</em> provide a temporary pop-up at the top of the screen that has the option for a response before hiding itself after five seconds. Applets have a native function for doing this without needing to use the screen directly: <code>send_temporary_notification()</code>.</p>
-<p><img alt="Banners" src="https://imgur.com/kKpx6ji.png" /></p>
+<div class="p-notification--information">
+    <p class="p-notification__response">
+        <span class="p-notification__status">Note:</span>If you need to send a notification on the behalf of the <i>operating system</i>, use <code>SystemUIServer.send_temporary_notification()</code>.
+    </p>
+</div>
+
+<p><img alt="Banners" src="../media/img/ns-banner.png" /></p>
 <p><code>banner(applet, title, message, response)</code></p>
 <p>Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of <code>0</code>.</p>
 <ul>
@@ -415,8 +438,10 @@ call screen banner(ddlc, "New character added!", "Monika's now in the game.", re
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#types-of-notifications">Types of notifications</a>
-</li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#alerts">Alerts</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#confirmation-alerts">Confirmation Alerts</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#permissive-alerts">Permissive Alerts</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#banners">Banners</a></li>
               </ul>
             </nav>
           </div>
