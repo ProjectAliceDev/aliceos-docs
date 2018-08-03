@@ -15,6 +15,7 @@ Stop errors (red screens of death) are system-wide errors that occur when a prob
 - `ERR_RESOURCE_LOCK` - one or more of the SEAlice components are missing.
 - `ERR_APPLET_LOCK` - one or more of core applet files are missing.
 - `ERR_TEST_LOCK` - one or more of the testing components are missing. This should never appear to the user.
+- `MISSING_CYANIDE_INSTRUMENT` - _Dark nights are upon us! / Black magic slays on the chorus!_
 
 <div class="p-notification--caution">
     <p class="p-notification__response">
