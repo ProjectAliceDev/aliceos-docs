@@ -251,6 +251,19 @@
                           
                         </li>
                       
+                        <li class="p-sidebar-nav__item">
+                          
+                            <a class="p-link--soft" href="pendleton.html">
+                          
+                          
+                            System applet
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
                     </ul>
                     
                   </li>
@@ -300,6 +313,12 @@
                         
                       </li>
                     
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                        
+                      </li>
+                    
                   </ul>
               </nav>
           </div>
@@ -312,9 +331,13 @@
                 <div class = "row">
                   <div class = "col-8">
                     <h1 id="applet-basics">Applet Basics<a class="anchor" href="#applet-basics"></a></h1>
-<p>Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. Thye usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.</p>
-<h2 id="applet-template">Applet Template<a class="anchor" href="#applet-template"></a></h2>
-<p>The <a href="https://github.com/TheAngelReturns/aliceos-applet">Applet Template</a> provided by the AliceOS Team provides a structure that can be followed to create a working Applet with proper manifest data. Aspiring AliceOS applet developers should start with the template before creating their own classes and applets from scratch.</p>
+<p>Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. They usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.</p>
+<div class="p-notification--information">
+    <p class="p-notification__response">
+        <span class="p-notification__status"></span>For aspiring developers, we've provided an <a href="https://github.com/TheAngelReturns/aliceos-applet">applet template</a> to get started with making applets quickly and easily.
+    </p>
+</div>
+
 <h2 id="structure">Structure<a class="anchor" href="#structure"></a></h2>
 <p>Applets follow a generic structure that makes use of existing AliceOS file structures.</p>
 <p>The overall structure of an applet in AliceOS looks like this:</p>
@@ -348,7 +371,7 @@
 <li><code>author</code>: The author of the applet, primarily the developer or
     developer team</li>
 <li><code>version</code>: The semantic version of the applet (ex.: <code>0.1.0</code>)</li>
-<li><code>description</code>: A short desription containing the applet's primary
+<li><code>description</code>: A short description containing the applet's primary
     functionality</li>
 </ul>
 <h4 id="declaring-app-icons">Declaring App Icons<a class="anchor" href="#declaring-app-icons"></a></h4>
@@ -372,11 +395,21 @@ icons = {
     folder</li>
 <li><code>pm_admin</code> - Modify system settings</li>
 </ul>
-<h4 id="other-functions">Other Functions<a class="anchor" href="#other-functions"></a></h4>
+<p>The <code>permissions</code> list uses the <code>short_name</code> of the Applet as a prefix. For instance, the entry for notifications for an applet called "Cyanogen":</p>
+<pre><code class = "prettyprint lang-py">
+persistent.aliceos_permissions["Cyanogen_notify"]
+</code></pre>
+
+<h2 id="default-functions">Default Functions<a class="anchor" href="#default-functions"></a></h2>
 <p>Most Applets will make use of two functions present:</p>
+<h4 id="ask_app_permissions"><code>ask_app_permissions()</code></h4>
+<p>Overtly asks the user permission for the specified items in the <code>permissions</code> list.</p>
+<h4 id="send_temporary_notificationsender-contents-action"><code>send_temporary_notification(sender, contents, action)</code></h4>
+<p>Sends a banner notification built upon the <code>banner()</code> screen.</p>
 <ul>
-<li><code>ask_app_permissions()</code> - Overtly asks the user permission for the specified items in the <code>permissions</code> list.</li>
-<li><code>send_temporary_notification(sender, contents, action)</code> - Sends a banner notification built upon the <code>banner()</code> screen.</li>
+<li><code>sender</code> - the title or the "sender" of the banner</li>
+<li><code>contents</code> - the message or description to be displayed</li>
+<li><code>action</code> - the action when user presses "Respond"</li>
 </ul>
                 </div>
               </div>
@@ -411,9 +444,10 @@ icons = {
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#applet-template">Applet Template</a></li>
-<li class="p-toc__item"><a class="p-toc__link" href="#structure">Structure</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#structure">Structure</a></li>
 <li class="p-toc__item"><a class="p-toc__link" href="#manifest">Manifest</a>
+</li>
+<li class="p-toc__item"><a class="p-toc__link" href="#default-functions">Default Functions</a>
 </li>
               </ul>
             </nav>

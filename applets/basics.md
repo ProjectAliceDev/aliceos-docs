@@ -4,12 +4,13 @@ title: Applet Basics
 Applet Basics
 =============
 
-Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. Thye usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.
+Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. They usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.
 
-Applet Template
----------------
-
-The [Applet Template](https://github.com/TheAngelReturns/aliceos-applet) provided by the AliceOS Team provides a structure that can be followed to create a working Applet with proper manifest data. Aspiring AliceOS applet developers should start with the template before creating their own classes and applets from scratch.
+<div class="p-notification--information">
+    <p class="p-notification__response">
+        <span class="p-notification__status"></span>For aspiring developers, we've provided an <a href="https://github.com/TheAngelReturns/aliceos-applet">applet template</a> to get started with making applets quickly and easily.
+    </p>
+</div>
 
 Structure
 ---------
@@ -53,7 +54,7 @@ By default, all AliceOS apps must contain the following information:
 -   `author`: The author of the applet, primarily the developer or
     developer team
 -   `version`: The semantic version of the applet (ex.: `0.1.0`)
--   `description`: A short desription containing the applet's primary
+-   `description`: A short description containing the applet's primary
     functionality
 
 #### Declaring App Icons
@@ -80,10 +81,24 @@ AliceOS enforces a strong security system that requires apps to declare what per
     folder
 -   `pm_admin` - Modify system settings
 
-#### Other Functions
+The `permissions` list uses the `short_name` of the Applet as a prefix. For instance, the entry for notifications for an applet called "Cyanogen":
+
+<pre><code class = "prettyprint lang-py">
+persistent.aliceos_permissions["Cyanogen_notify"]
+</code></pre>
+
+
+## Default Functions
 
 Most Applets will make use of two functions present:
 
--   `ask_app_permissions()` - Overtly asks the user permission for the specified items in the `permissions` list.
--   `send_temporary_notification(sender, contents, action)` - Sends a banner notification built upon the `banner()` screen.
+#### `ask_app_permissions()`
+Overtly asks the user permission for the specified items in the `permissions` list.
+
+#### `send_temporary_notification(sender, contents, action)`
+Sends a banner notification built upon the `banner()` screen.
+
+- `sender` - the title or the "sender" of the banner
+- `contents` - the message or description to be displayed
+- `action` - the action when user presses "Respond"
 

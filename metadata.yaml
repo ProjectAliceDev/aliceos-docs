@@ -32,4 +32,7 @@ navigation:
 
       - location: applets/renpy.md
         title: Ren'Py applet
+
+      - location: applets/pendleton.md
+        title: System applet
       
