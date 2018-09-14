@@ -23,6 +23,8 @@ def run_build():
         copyfile(".htaccess", "docs/.htaccess")
         with open("docs/CNAME", "w+") as cname:
             cname.write("docs.aliceos.app")
+
+        copyfile("index.html", "docs/index.html")
     except:
         "Something went wrong. Are you sure that you have the right files?"
 
