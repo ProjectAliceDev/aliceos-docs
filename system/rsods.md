@@ -8,7 +8,7 @@ Stop errors (red screens of death) are system-wide errors that occur when a prob
 ## Typical stop errors
 - `INACCESSIBLE_BOOT_DEVICE` - the file required to start the integrity check process is missing.
 - `ERR_SEALICE_LOCK` - one or more of the SEAlice components are missing. This is displayed if SEAlice has been implemented into your AliceOS distribution.
-- `MISSING_CYANIDE_INSTRUMENT` - _Dark nights are upon us! / Black magic slays on the chorus!
+- `MISSING_CYANIDE_INSTRUMENT` - Dark nights are upon us! / Black magic slays on the chorus!
 
 Additionally, manufacturers and AliceOS distribution managers can add additional Stop errors. If you receive a Stop error that doesn't match the defaults listed above, plase consult your AliceOS distribution manager or manufacturer.
 
