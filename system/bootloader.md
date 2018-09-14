@@ -28,16 +28,14 @@ The OEM boot screen is generally used in projects that don't put a heavy emphasi
 <li class="p-list__item is-ticked">The AliceOS installation is completely customized</li>
 </ul>
 
-## Integrity check
-<div class="p-notification--caution">
-    <p class="p-notification__response">
-        <span class="p-notification__status">Deprecation warning:</span>The implementation of SEAlice may change the functionality present in the bootloader.
-    </p>
-</div>
-
-Occassionally, the "Checking system integrity..." text may appear on the boot screen and eventually cause a boot loop. If this happens, check the following:
-
-- All required files are properly installed in the game folder.
-- Let the check run for ten seconds and the restart the game.
-- Ensure that your code enables a boot pass (see DDTAR).
-
+## Implementation
+To incorporate this into your project, add the following lines to the beginning your `splashscreen` label:
+<pre><code class = "prettyprint lang-py">
+call <type>_boot_screen #change <type> to default or oem
+if not persistent.setup_complete:
+	call setup
+	persistent.setup_complete = True
+	$ renpy.utter_restart()
+else:
+	pass
+</code></pre>
