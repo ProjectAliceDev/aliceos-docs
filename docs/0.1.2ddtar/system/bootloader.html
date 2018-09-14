@@ -5,9 +5,9 @@
     
 
     <meta charset="UTF-8" />
-    <title>Ren'Py Applet | Documentation</title>
+    <title>Boot Screens | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Mono|Comfortaa');
@@ -100,7 +100,7 @@
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
               <a class="p-navigation__link" href="/">
-                <img class="p-navigation__image" src="../media/img/logomark.svg" alt=" logo">docs
+                <img class="p-navigation__image" src="../../media/img/logomark.svg" alt=" logo">docs
               </a>
             </div>
           </div>
@@ -116,6 +116,22 @@
             <i class="p-sidebar__toggle p-icon--menu"></i>
           </div>
           <div class="p-sidebar__content u-hide--small">
+              
+              <label for="version-select">Version</label>
+              <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
+                
+                  <option value=""
+                    selected
+                    
+                  >0.1.2ddtar
+                  </option>
+                
+                  <option value="../../master/system/bootloader.md"
+                    
+                  >master
+                  </option>
+                
+              </select>
               
             <form class="p-search-box" onsubmit="return false">
               <input type="search" id="search-docs" class="p-search-box__input" name="search" placeholder="Search components" oninput="filterDocs()" title="Search the documentation" required />
@@ -165,7 +181,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/bootloader.html">
+                            <a class="p-link--soft is-active" href="bootloader.html">
                           
                           
                             Boot screens
@@ -178,7 +194,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/notifications.html">
+                            <a class="p-link--soft" href="notifications.html">
                           
                           
                             Notifications
@@ -191,7 +207,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/rsods.html">
+                            <a class="p-link--soft" href="rsods.html">
                           
                           
                             Stop errors
@@ -215,7 +231,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -228,7 +244,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -241,7 +257,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -254,7 +270,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -280,43 +296,43 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                          <a class="p-link--soft" href="bootloader.html">Boot screens</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                          <a class="p-link--soft" href="notifications.html">Notifications</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/rsods.html">Stop errors</a>
+                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
@@ -331,16 +347,37 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
-<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
-<h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
+                    <h1 id="boot-screens">Boot Screens<a class="anchor" href="#boot-screens"></a></h1>
+<p>The boot screen is an important part of any AliceOS project; the boot screen checks the integrity of some parts of the system and informs the user that he/she is using AliceOS. There are two distinct boot screens that AliceOS contains for use. Both of these boot screens perform the same functions.</p>
+<h2 id="standard-boot-screen">Standard boot screen<a class="anchor" href="#standard-boot-screen"></a></h2>
+<p><img alt="Standard boot screen" src="../../media/img/sbs.png" /></p>
+<p>The standard boot screen is generally used in projects that want to emphasize AliceOS as an integral part of the game. This also indicates that the AliceOS system has not been modified for use or is a first-party mod created by the AliceOS team.</p>
+<h4 id="use-the-standard-boot-screen-if:">Use the standard boot screen if:<a class="anchor" href="#use-the-standard-boot-screen-if:"></a></h4>
+<p><ul class="p-list">
+    <li class="p-list__item is-ticked">The core components of AliceOS have been unchanged</li>
+    <li class="p-list__item is-ticked">The game/mod is created by the AliceOS team or approved partners</li>
+    <li class="p-list__item is-ticked">The AliceOS installation is cusomized through additions</li>
+</ul></p>
+<h2 id="oem-boot-screen">OEM boot screen<a class="anchor" href="#oem-boot-screen"></a></h2>
+<p><img alt="OEM boot screen" src="../../media/img/obs.png" /></p>
+<p>The OEM boot screen is generally used in projects that don't put a heavy emphasis on AliceOS as an integral part of the game. This also indicates that the AliceOS system has been modified heavily for the Ren'Py project specifically or is a third-party mod.</p>
+<h4 id="use-the-oem-boot-screen-if:">Use the OEM boot screen if:<a class="anchor" href="#use-the-oem-boot-screen-if:"></a></h4>
+<p><ul class="p-list">
+<li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
+<li class="p-list__item is-ticked">The game/mod is made by a third party</li>
+<li class="p-list__item is-ticked">The AliceOS installation is completely customized</li>
+</ul></p>
+<h2 id="integrity-check">Integrity check<a class="anchor" href="#integrity-check"></a></h2>
+<p><div class="p-notification--caution">
+    <p class="p-notification__response">
+        <span class="p-notification__status">Deprecation warning:</span>The implementation of SEAlice may change the functionality present in the bootloader.
+    </p>
+</div></p>
+<p>Occassionally, the "Checking system integrity..." text may appear on the boot screen and eventually cause a boot loop. If this happens, check the following:</p>
 <ul>
-<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
-<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
-<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
-<li><code>author</code> - Ren'Py Team</li>
-<li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Uses <code>gui.about</code></li>
+<li>All required files are properly installed in the game folder.</li>
+<li>Let the check run for ten seconds and the restart the game.</li>
+<li>Ensure that your code enables a boot pass (see DDTAR).</li>
 </ul>
                 </div>
               </div>
@@ -375,7 +412,11 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#standard-boot-screen">Standard boot screen</a>
+</li>
+<li class="p-toc__item"><a class="p-toc__link" href="#oem-boot-screen">OEM boot screen</a>
+</li>
+<li class="p-toc__item"><a class="p-toc__link" href="#integrity-check">Integrity check</a></li>
               </ul>
             </nav>
           </div>

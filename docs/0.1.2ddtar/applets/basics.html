@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Applet Basics | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Mono|Comfortaa');
@@ -100,7 +100,7 @@
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
               <a class="p-navigation__link" href="/">
-                <img class="p-navigation__image" src="../media/img/logomark.svg" alt=" logo">docs
+                <img class="p-navigation__image" src="../../media/img/logomark.svg" alt=" logo">docs
               </a>
             </div>
           </div>
@@ -116,6 +116,22 @@
             <i class="p-sidebar__toggle p-icon--menu"></i>
           </div>
           <div class="p-sidebar__content u-hide--small">
+              
+              <label for="version-select">Version</label>
+              <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
+                
+                  <option value=""
+                    selected
+                    
+                  >0.1.2ddtar
+                  </option>
+                
+                  <option value="../../master/applets/basics.md"
+                    
+                  >master
+                  </option>
+                
+              </select>
               
             <form class="p-search-box" onsubmit="return false">
               <input type="search" id="search-docs" class="p-search-box__input" name="search" placeholder="Search components" oninput="filterDocs()" title="Search the documentation" required />

@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Page Not Found | Documentation</title>
+    <title>AliceOS Docs | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
@@ -117,6 +117,22 @@
           </div>
           <div class="p-sidebar__content u-hide--small">
               
+              <label for="version-select">Version</label>
+              <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
+                
+                  <option value="../0.1.2ddtar/index.md"
+                    
+                  >0.1.2ddtar
+                  </option>
+                
+                  <option value=""
+                    selected
+                    
+                  >master
+                  </option>
+                
+              </select>
+              
             <form class="p-search-box" onsubmit="return false">
               <input type="search" id="search-docs" class="p-search-box__input" name="search" placeholder="Search components" oninput="filterDocs()" title="Search the documentation" required />
               <button type="reset" class="p-search-box__reset u-no-margin--right" alt="reset" onclick="resetFilter()"><i class="p-icon--close"></i></button>
@@ -141,7 +157,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="index.html">
+                            <a class="p-link--soft is-active" href="index.html">
                           
                           
                             Getting started
@@ -327,24 +343,80 @@
         
         <main class="p-content" id="main-content">
             
-            <div class="p-strip is-shallow">
-              <div class="p-content__row">
-                <div class = "row">
-                  <div class = "col-8">
-                    <h1 id="404-page-not-found"><code>404</code> - Page Not Found</h1>
-<p>The page you're looking for can't be found. Are you sure this is the place?</p>
-<h3 id="why-am-i-seeing-this?">Why am I seeing this?<a class="anchor" href="#why-am-i-seeing-this?"></a></h3>
-<p>There may be a few reasons why you have reached this page:</p>
-<ul>
-<li>The API or documentation page was moved, deprecated, or combined on another page.</li>
-<li>The URL given was typed incorrectly.</li>
-<li>The documentation page is not available for the latest release of AliceOS.</li>
-<li>Something went wrong server-side.</li>
-</ul>
-<p>We recommend searching for the item you're looking for in the sidebar.</p>
-                </div>
-              </div>
+              <div class="p-strip--image is-dark" style="background-image: url('../media/img/trianglify.svg')">
+    <div class="p-content__row shadow">
+        <div class="col-8">
+            <h1>AliceOS Documentation</h1>
+            <p>AliceOS is an independent, open-source project that brings a virtual operating system into Doki Doki Literature Club! as a mod and to Ren'Py projects as a framework. AliceOS is also the core operating system used in Doki Doki: The Angel Returns.</p>
+        </div>
+    </div>
+</div>
+
+<div class="p-strip">
+    <div class="p-content__row">
+        <div class="u-equal-height">
+            <div class="col-12">
+            <div class="p-notification--caution">
+                <p class="p-notification__response">
+                    <span class="p-notification__status">Careful:</span>This documentation is currently still under construction. Features, pages, and other parts of this site may be changed over time.
+                </p>
             </div>
+                <h2>Getting started</h2>
+                <div>
+                    <p>There are a few ways to add AliceOS to your Ren'Py project.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="is-deep">
+        <div class="u-equal-height">
+            <div class="col-12">
+                <h3>Install from source</h3>
+                <div>
+                    <p>If you want to use AliceOS with any particular version of the Ren'Py SDK, it's best to grab a copy of the source code and compile it manually:</p>
+                    <p><pre>
+git clone https://github.com/TheAngelReturns/aliceos.git
+                    </pre></p>
+                    <p>Open the Ren'Py launcher and click 'Distribute' and select 'AliceOS Installation' as the target platform. The result will create a new <code>AliceOS.rpa</code> file that can be dropped into your Ren'Py game.</p>
+                    <p>Alternatively, you can drop the AliceOS system folders and files directly into the game without copmiling it to an RPA.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="is-deep">
+        <div class="u-equal-height">
+            <div class="col-12">
+                <h3>Download</h3>
+                <div>
+                    <p>If you are using Ren'Py SDK 6.99.12.4, you can download the pre-built RPA on GitHub:</p>
+                    <p><a href = "https://github.com/TheAngelReturns/aliceos/releases/" class = "p-button--positive p-link--external">Download</a></p>
+                </div>
+            </div>
+        </div>
+        <hr class="is-deep">
+        <div class="u-equal-height">
+            <div class="col-6">
+                <h2>Getting support</h2>
+                <ul class="p-list">
+                    <li class="p-list__item">
+                        <a class="p-link--external" href="https://discord.gg/tdvNzjW">Discord</a>
+                    </li>
+                    <li class="p-list__item">
+                        <a class="p-link--external" href="https://reddit.com/r/TheAngelReturns">Reddit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h2>Contribute</h2>
+                <ul class="p-list">
+                    <!--<li class="p-list__item"><a class="p-link--external" href="#">Contributing guides</a></li>
+                    <li class="p-list__item--deep"><a class="p-link--external" href="#">Ways you can contribute</a></li>-->
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos">Push some code</a></li>
+                    <li class="p-list__item--deep"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos/issues/new">File an issue</a></li>
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos-docs">Write some docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
             
           <footer class="p-footer" role="contentinfo">
             <div class="p-content__row u-no-margin--left">
@@ -368,19 +440,6 @@
             </div>
           </footer>
         </main>
-        
-        <aside id="side-content" class="p-aside">
-          
-          <div class="p-aside__section">
-            <h4 class="p-aside__header">Contents</h4>
-            <nav class="p-aside__nav">
-              <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#why-am-i-seeing-this">Why am I seeing this?</a></li>
-              </ul>
-            </nav>
-          </div>
-          
-        </aside>
         
       </div>
       <script src="/media/js/scripts.js"></script>

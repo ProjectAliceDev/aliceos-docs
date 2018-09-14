@@ -14,13 +14,13 @@ def run_build():
 
     print "Building documentation with documentation-builder..."
     try:
-        os.system("documentation-builder --template template.html --output-path ./docs --build-version-branches --no-link-extensions")
+        os.system("documentation-builder --template template.html --output-path ./docs --build-version-branches")
     except:
         print "Something went wrong. Are you sure you have documentation-builder installed?"
 
     print "Copying GitHub Pages files over..."
     try:
-        copyfile(".htaccess", "docs/.htaccess")
+        # copyfile(".htaccess", "docs/.htaccess")
         with open("docs/CNAME", "w+") as cname:
             cname.write("docs.aliceos.app")
 

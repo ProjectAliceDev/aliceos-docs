@@ -5,9 +5,9 @@
     
 
     <meta charset="UTF-8" />
-    <title>System Applet (Pendleton) | Documentation</title>
+    <title>Ren'Py Applet | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../media/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../media/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto+Mono|Comfortaa');
@@ -100,7 +100,7 @@
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
               <a class="p-navigation__link" href="/">
-                <img class="p-navigation__image" src="../media/img/logomark.svg" alt=" logo">docs
+                <img class="p-navigation__image" src="../../media/img/logomark.svg" alt=" logo">docs
               </a>
             </div>
           </div>
@@ -116,6 +116,22 @@
             <i class="p-sidebar__toggle p-icon--menu"></i>
           </div>
           <div class="p-sidebar__content u-hide--small">
+              
+              <label for="version-select">Version</label>
+              <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
+                
+                  <option value=""
+                    selected
+                    
+                  >0.1.2ddtar
+                  </option>
+                
+                  <option value="../../master/applets/renpy.md"
+                    
+                  >master
+                  </option>
+                
+              </select>
               
             <form class="p-search-box" onsubmit="return false">
               <input type="search" id="search-docs" class="p-search-box__input" name="search" placeholder="Search components" oninput="filterDocs()" title="Search the documentation" required />
@@ -241,7 +257,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="renpy.html">
+                            <a class="p-link--soft is-active" href="renpy.html">
                           
                           
                             Ren'Py applet
@@ -254,7 +270,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="pendleton.html">
+                            <a class="p-link--soft" href="pendleton.html">
                           
                           
                             System applet
@@ -331,18 +347,17 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="system-applet-(pendleton)">System Applet (Pendleton)<a class="anchor" href="#system-applet-(pendleton)"></a></h1>
-<p>AliceOS comes with a unique applet designed for system notifications and processes that must be executed in such a manner: Pendleton.</p>
+                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
+<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
 <h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
 <ul>
-<li><code>short_name</code> - Pendleton</li>
-<li><code>long_name</code> - AliceOS System</li>
-<li><code>version</code> - Uses AliceOS version</li>
-<li><code>author</code> - AliceOS Developers</li>
+<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
+<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
+<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
+<li><code>author</code> - Ren'Py Team</li>
 <li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Send system notifications.</li>
+<li><code>description</code> - Uses <code>gui.about</code></li>
 </ul>
-<p>In code, Pendleton is called as <code>SystemUIServer</code>.</p>
                 </div>
               </div>
             </div>

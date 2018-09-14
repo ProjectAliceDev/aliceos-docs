@@ -53,5 +53,5 @@ links.forEach(function(link) {
 
 function selectVersion(value) {
     var href = value.replace(/.md$/, "");
-    location = href;
+    location = href + ".html";
 }
