@@ -1,6 +1,6 @@
 site_logo_url: ../media/img/logomark.svg
 site_logo_href: /
-baseurl: https://docs.aliceos.app
+baseurl: https://docs.aliceos.app/
 site_favicon: ../media/img/favicon.ico
 
 navigation:
