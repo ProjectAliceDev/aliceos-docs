@@ -14,10 +14,13 @@ Additionally, manufacturers and AliceOS distribution managers can add additional
 
 ## Typical causes of Stop errors
 These may or may not apply to each Stop error, but these are common causes for such errors.
+
 - SEAlice may have been not properly implemented into the AliceOS distribution.
 - The user failed to agree to the license terms of AliceOS or the game that AliceOS is bundled with.
 - The script may have called an area that doesn't yet exist or broke in a way that Ren'Py doesn't detect.
 - A component needed for a system action was not initialized or made accessible.
 
 ## Customizing Stop errors
+![Standard boot screen](../media/img/rsod_custom.png)
+
 The source code for Stop error displays are found in `CoreServices\ASErrorHandler.rpy`. Additionally, if you want to customize the background, look for `Resources/rsod_overlay.png`.
