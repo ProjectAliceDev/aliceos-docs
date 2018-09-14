@@ -363,22 +363,21 @@
 <p>The OEM boot screen is generally used in projects that don't put a heavy emphasis on AliceOS as an integral part of the game. This also indicates that the AliceOS system has been modified heavily for the Ren'Py project specifically or is a third-party mod.</p>
 <h4 id="use-the-oem-boot-screen-if:">Use the OEM boot screen if:<a class="anchor" href="#use-the-oem-boot-screen-if:"></a></h4>
 <p><ul class="p-list">
-<li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
-<li class="p-list__item is-ticked">The game/mod is made by a third party</li>
-<li class="p-list__item is-ticked">The AliceOS installation is completely customized</li>
+    <li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
+    <li class="p-list__item is-ticked">The game/mod is made by a third party</li>
+    <li class="p-list__item is-ticked">The AliceOS installation is completely customized, including branding assets</li>
 </ul></p>
-<h2 id="integrity-check">Integrity check<a class="anchor" href="#integrity-check"></a></h2>
-<p><div class="p-notification--caution">
-    <p class="p-notification__response">
-        <span class="p-notification__status">Deprecation warning:</span>The implementation of SEAlice may change the functionality present in the bootloader.
-    </p>
-</div></p>
-<p>Occassionally, the "Checking system integrity..." text may appear on the boot screen and eventually cause a boot loop. If this happens, check the following:</p>
-<ul>
-<li>All required files are properly installed in the game folder.</li>
-<li>Let the check run for ten seconds and the restart the game.</li>
-<li>Ensure that your code enables a boot pass (see DDTAR).</li>
-</ul>
+<h2 id="implementation">Implementation<a class="anchor" href="#implementation"></a></h2>
+<p>To incorporate this into your project, add the following lines to the beginning your <code>splashscreen</code> label:
+<pre><code class = "prettyprint lang-py">
+call type_boot_screen #change type to default or oem
+if not persistent.setup_complete:
+    call setup
+    persistent.setup_complete = True
+    $ renpy.utter_restart()
+else:
+    pass
+</code></pre></p>
                 </div>
               </div>
             </div>
@@ -416,7 +415,7 @@
 </li>
 <li class="p-toc__item"><a class="p-toc__link" href="#oem-boot-screen">OEM boot screen</a>
 </li>
-<li class="p-toc__item"><a class="p-toc__link" href="#integrity-check">Integrity check</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#implementation">Implementation</a></li>
               </ul>
             </nav>
           </div>
