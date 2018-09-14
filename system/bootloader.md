@@ -23,15 +23,15 @@ The OEM boot screen is generally used in projects that don't put a heavy emphasi
 
 #### Use the OEM boot screen if:
 <ul class="p-list">
-<li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
-<li class="p-list__item is-ticked">The game/mod is made by a third party</li>
-<li class="p-list__item is-ticked">The AliceOS installation is completely customized</li>
+	<li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
+	<li class="p-list__item is-ticked">The game/mod is made by a third party</li>
+	<li class="p-list__item is-ticked">The AliceOS installation is completely customized, including branding assets</li>
 </ul>
 
 ## Implementation
 To incorporate this into your project, add the following lines to the beginning your `splashscreen` label:
 <pre><code class = "prettyprint lang-py">
-call <type>_boot_screen #change <type> to default or oem
+call type_boot_screen #change type to default or oem
 if not persistent.setup_complete:
 	call setup
 	persistent.setup_complete = True

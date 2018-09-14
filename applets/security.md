@@ -2,7 +2,7 @@
 title: Applet Security
 ---
 # Applet Security
-AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the GOBFADU policy.
+AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.
 
 ## Security Overview
 For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:
