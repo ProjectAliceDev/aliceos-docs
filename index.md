@@ -1,7 +1,7 @@
 ---
 title: AliceOS Docs
 homepage: true
-permalink: /index.html
+permalink: /index
 ---
 
 <div class="p-strip--image is-dark" style="background-image: url('../media/img/trianglify.svg')">
