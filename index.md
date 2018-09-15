@@ -3,8 +3,14 @@ title: AliceOS Docs
 homepage: true
 permalink: /index
 ---
-
-<div class="p-strip--image is-dark" style="background-image: url('../media/img/hero-doc.png')">
+<style>
+    #hero {
+        background-image: url('../media/img/hero-doc.png');
+        padding-top: 128px;
+        padding-bottom: 128px;
+    }
+</style>
+<div class="p-strip--image is-dark" id = "hero">
     <div class="p-content__row shadow">
         <div class="col-8">
             <h1>AliceOS Documentation</h1>
