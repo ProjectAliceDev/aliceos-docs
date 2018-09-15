@@ -14,6 +14,9 @@ navigation:
 
         - location: system/bootloader.md
           title: Boot screens
+
+        - location: system/pisa.md
+          title: Setup wizard
           
         - location: system/notifications.md
           title: Notifications

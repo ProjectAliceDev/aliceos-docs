@@ -42,8 +42,6 @@ permalink: /index
                     <p><pre>
 git clone https://github.com/TheAngelReturns/aliceos.git
                     </pre></p>
-                    <p>Open the Ren'Py launcher and click 'Distribute' and select 'AliceOS Installation' as the target platform. The result will create a new <code>AliceOS.rpa</code> file that can be dropped into your Ren'Py game.</p>
-                    <p>Alternatively, you can drop the AliceOS system folders and files directly into the game without copmiling it to an RPA.</p>
                 </div>
             </div>
         </div>
@@ -52,7 +50,7 @@ git clone https://github.com/TheAngelReturns/aliceos.git
             <div class="col-12">
                 <h3>Download</h3>
                 <div>
-                    <p>If you are using Ren'Py SDK 6.99.12.4, you can download the pre-built RPA on GitHub:</p>
+                    <p>If you want to download AliceOS as a ZIP or TAR.GZ file, you can use the downloads page to grab a copy.</p>
                     <p><a href = "https://github.com/TheAngelReturns/aliceos/releases/" class = "p-button--positive p-link--external">Download</a></p>
                 </div>
             </div>
@@ -73,8 +71,6 @@ git clone https://github.com/TheAngelReturns/aliceos.git
             <div class="col-6">
                 <h2>Contribute</h2>
                 <ul class="p-list">
-                    <!--<li class="p-list__item"><a class="p-link--external" href="#">Contributing guides</a></li>
-                    <li class="p-list__item--deep"><a class="p-link--external" href="#">Ways you can contribute</a></li>-->
                     <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos">Push some code</a></li>
                     <li class="p-list__item--deep"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos/issues/new">File an issue</a></li>
                     <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos-docs">Write some docs</a></li>
