@@ -4,7 +4,7 @@ homepage: true
 permalink: /index
 ---
 
-<div class="p-strip--image is-dark" style="background-image: url('../media/img/trianglify.svg')">
+<div class="p-strip--image is-dark" style="background-image: url('../media/img/hero-doc.png')">
     <div class="p-content__row shadow">
         <div class="col-8">
             <h1>AliceOS Documentation</h1>
