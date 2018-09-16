@@ -13,7 +13,7 @@ permalink: /index
 <div class="p-strip--image is-dark" id = "docs-hero">
     <div class="p-content__row shadow">
         <div class="col-8">
-            <h1>AliceOS Documentation</h1>
+            <h1>AliceOS Documentation (Technical Preview 1)</h1>
             <p>AliceOS brings new features and experiences to any Ren'Py project. From giving users notifications to its extensibility with Applets, AliceOS makes any visual novel more exciting and enriching for its players and developers.</p>
         </div>
     </div>
@@ -22,11 +22,6 @@ permalink: /index
     <div class="p-content__row">
         <div class="u-equal-height">
             <div class="col-12">
-            <div class="p-notification--caution">
-                <p class="p-notification__response">
-                    <span class="p-notification__status">Careful:</span>This documentation is currently still under construction. Features, pages, and other parts of this site may be changed over time.
-                </p>
-            </div>
                 <h2>Getting started</h2>
                 <div>
                     <p>There are a few ways to add AliceOS to your Ren'Py project.</p>
