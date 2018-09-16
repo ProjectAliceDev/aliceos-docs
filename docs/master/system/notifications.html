@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Notifications | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../media/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
@@ -232,6 +232,19 @@
                           
                         </li>
                       
+                        <li class="p-sidebar-nav__item">
+                          
+                            <a class="p-link--soft" href="oem.html">
+                          
+                          
+                            OEM settings
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
                     </ul>
                     
                   </li>
@@ -329,6 +342,12 @@
                       <li class="p-sidebar-nav__item">
                         
                           <a class="p-link--soft" href="rsods.html">Stop errors</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
+                          <a class="p-link--soft" href="oem.html">OEM settings</a>
                         
                       </li>
                     
@@ -461,6 +480,9 @@ call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_ac
 <pre><code class = "prettyprint lang-py">
 call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
 </code></pre>
+
+<h2 id="customizing-notifications">Customizing notifications<a class="anchor" href="#customizing-notifications"></a></h2>
+<p>Backgrounds for the notification frames are located in the <code>Resources</code> directory. Any additional font customizations are taken from <code>OEMSettings.rpy</code>.</p>
                 </div>
               </div>
             </div>
@@ -498,6 +520,7 @@ call screen banner(ddlc, "New character added!", "Monika's now in the game.", re
 <li class="p-toc__item"><a class="p-toc__link" href="#confirmation-alerts">Confirmation Alerts</a></li>
 <li class="p-toc__item"><a class="p-toc__link" href="#permissive-alerts">Permissive Alerts</a></li>
 <li class="p-toc__item"><a class="p-toc__link" href="#banners">Banners</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#customizing-notifications">Customizing notifications</a></li>
               </ul>
             </nav>
           </div>

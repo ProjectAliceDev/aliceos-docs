@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Setup wizard | Documentation</title>
+    <title>OEM settings | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -196,7 +196,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="pisa.html">
+                            <a class="p-link--soft" href="pisa.html">
                           
                           
                             Setup wizard
@@ -235,7 +235,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="oem.html">
+                            <a class="p-link--soft is-active" href="oem.html">
                           
                           
                             OEM settings
@@ -387,26 +387,23 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="post-installation-setup-assistant-(pisa)">Post installation setup assistant (Pisa)<a class="anchor" href="#post-installation-setup-assistant-(pisa)"></a></h1>
-<p>AliceOS comes bundled with a setup assistant to allow users to configure AliceOS and the game before starting it for the first time. By default, the setup assistant completes the following tasks:</p>
+                    <h1 id="oem-settings">OEM Settings<a class="anchor" href="#oem-settings"></a></h1>
+<p>AliceOS allows distribution managers and manufacturers to easily change settings and properties of AliceOS in addition to modifying its source code. In the <code>Resources</code> directory, manufactureres can edit the <code>OEMSettings.rpy</code> file to achieve this.</p>
+<h2 id="general-information">General information<a class="anchor" href="#general-information"></a></h2>
+<p>In order to enable the OEM mode and its settings, the following needs to be filled in.</p>
 <ul>
-<li>Introduce players to the beta mode, if applicable.</li>
-<li>Display licenses that need to be agreed to before starting.</li>
-<li>Creating a username for use in-game.</li>
+<li><code>aliceos.oem_mode</code> - Whether the OEM mode should be turned on or off. Default is False.</li>
+<li><code>aliceos.oem_name</code> - The OEM's name.</li>
+<li><code>aliceos.oem_website</code> - The OEM's website.</li>
+<li><code>aliceos.oem_support</code> - The email address to which the player can contact for questions regarding the custom distribution of AliceOS.</li>
 </ul>
-<p><img alt="The entry screen to Pisa" src="../../media/img/pisa-enter.png" /></p>
-<h2 id="license-agreements">License agreements<a class="anchor" href="#license-agreements"></a></h2>
-<p><img alt="License agreement screen" src="../../media/img/pisa-license.png" /></p>
-<p>The license agreement screens are usually the first screen presented to the user after starting the setup assistant. In all AliceOS distributions, the first license (if not only) will display a summary of the GNU GPL v3 license. The user must agree to the terms to continue. Otherwise, the setup assistant will halt and a Stop error is thrown.</p>
-<p>Additionally, if your game includes its own license agreement or disclaimer, it can be called and acted in the same way.</p>
-<h2 id="account-creation">Account creation<a class="anchor" href="#account-creation"></a></h2>
-<p><img alt="The account creation screen" src="../../media/img/pisa-accounts.png" /></p>
-<p>The other major component includes the user account creation screen. This screen allows users to enter in a name that is presented in-game via the variable <code>persistent.playername</code>. It also creates a <code>profiles.moj</code> file with <code>sierra</code> as the "password".</p>
-<h2 id="customizing-the-setup-assistant">Customizing the setup assistant<a class="anchor" href="#customizing-the-setup-assistant"></a></h2>
-<p><img alt="A custom setup assistant" src="../../media/img/pisa-custom.png" /></p>
-<p>The setup assistant can be customized with special branding, colors, or fonts. Typically, these screens rely on assets found in the <code>Resources</code> folder, but they can optionally point to new files. The source file to edit this assistant can be located in <code>CoreServices/Setup.rpy</code>. These files also are subject to OEM customization rules set out in <code>OEMSettings.rpy</code>.</p>
-<p><img alt="A custom setup assistant screen" src="../../media/img/pisa-custom-step.png" /></p>
-<p>In addition to modifying the look of the Setup screen, developers can add additional steps to the Setup process as per the code found in <code>Setup.rpy</code>.</p>
+<h2 id="custom-fonts">Custom fonts<a class="anchor" href="#custom-fonts"></a></h2>
+<p>For each of the respected variants of AliceOS's fonts, variables exist to acommodate them. Their values should equal the path of where the font file is located in the <code>game</code> folder. For example:</p>
+<pre><code class = "prettyprint lang-py">
+define aliceos.oem_font_regular = "Resources/systemfont/OEM/Regular.ttf"
+</code></pre>
+
+<p>AliceOS will replace the default system font with the ones provided by the OEM if OEM mode is enabled.</p>
                 </div>
               </div>
             </div>
@@ -440,9 +437,8 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#license-agreements">License agreements</a></li>
-<li class="p-toc__item"><a class="p-toc__link" href="#account-creation">Account creation</a></li>
-<li class="p-toc__item"><a class="p-toc__link" href="#customizing-the-setup-assistant">Customizing the setup assistant</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#general-information">General information</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#custom-fonts">Custom fonts</a></li>
               </ul>
             </nav>
           </div>

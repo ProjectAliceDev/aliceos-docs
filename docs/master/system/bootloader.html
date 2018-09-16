@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <title>Boot Screens | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../../media/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-1.7.1.min.css" />
     <style>
@@ -232,6 +232,19 @@
                           
                         </li>
                       
+                        <li class="p-sidebar-nav__item">
+                          
+                            <a class="p-link--soft" href="oem.html">
+                          
+                          
+                            OEM settings
+                          
+                          
+                            </a>
+                          
+                          
+                        </li>
+                      
                     </ul>
                     
                   </li>
@@ -334,6 +347,12 @@
                     
                       <li class="p-sidebar-nav__item">
                         
+                          <a class="p-link--soft" href="oem.html">OEM settings</a>
+                        
+                      </li>
+                    
+                      <li class="p-sidebar-nav__item">
+                        
                           <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
@@ -390,14 +409,9 @@
 <h2 id="implementation">Implementation<a class="anchor" href="#implementation"></a></h2>
 <p>To incorporate this into your project, add the following lines to the beginning your <code>splashscreen</code> label:
 <pre><code class = "prettyprint lang-py">
-call type_boot_screen #change type to default or oem
-if not persistent.setup_complete:
-    call setup
-    persistent.setup_complete = True
-    $ renpy.utter_restart()
-else:
-    pass
+call bootloader
 </code></pre></p>
+<p>The project, depending on your settings in <code>OEMSettings.rpy</code>, will determine which boot screen to display.</p>
                 </div>
               </div>
             </div>
