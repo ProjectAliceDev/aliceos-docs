@@ -41,4 +41,11 @@ navigation:
 
       - location: applets/pendleton.md
         title: System applet
+
+    - title: AliceOS Brand
+      children:
+
+      - location: brand/styles.md
+        title: Stylesheet
+
       
