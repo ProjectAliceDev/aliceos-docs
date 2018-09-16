@@ -31,11 +31,7 @@ The OEM boot screen is generally used in projects that don't put a heavy emphasi
 ## Implementation
 To incorporate this into your project, add the following lines to the beginning your `splashscreen` label:
 <pre><code class = "prettyprint lang-py">
-call type_boot_screen #change type to default or oem
-if not persistent.setup_complete:
-	call setup
-	persistent.setup_complete = True
-	$ renpy.utter_restart()
-else:
-	pass
+call bootloader
 </code></pre>
+
+The project, depending on your settings in `OEMSettings.rpy`, will determine which boot screen to display.

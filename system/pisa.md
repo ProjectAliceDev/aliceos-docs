@@ -25,8 +25,8 @@ The other major component includes the user account creation screen. This screen
 ## Customizing the setup assistant
 ![A custom setup assistant](../media/img/pisa-custom.png)
 
-The setup assistant can be customized with special branding, colors, or fonts. Typically, these screens rely on assets found in the `Resources` folder, but they can optionally point to new files. The source file to edit this assistant can be located in `CoreServices/ASetup.rpy`.
+The setup assistant can be customized with special branding, colors, or fonts. Typically, these screens rely on assets found in the `Resources` folder, but they can optionally point to new files. The source file to edit this assistant can be located in `CoreServices/Setup.rpy`. These files also are subject to OEM customization rules set out in `OEMSettings.rpy`.
 
 ![A custom setup assistant screen](../media/img/pisa-custom-step.png)
 
-In addition to modifying the look of the Setup screen, developers can add additional steps to the Setup process as per the code found in `ASetup.rpy`.
+In addition to modifying the look of the Setup screen, developers can add additional steps to the Setup process as per the code found in `Setup.rpy`.

@@ -23,4 +23,4 @@ These may or may not apply to each Stop error, but these are common causes for s
 ## Customizing Stop errors
 ![Standard boot screen](../media/img/rsod_custom.png)
 
-The source code for Stop error displays are found in `CoreServices\ASErrorHandler.rpy`. Additionally, if you want to customize the background, look for `Resources/rsod_overlay.png`.
+The source code for Stop error displays are found in `CoreServices\ASErrorHandler.rpy`. Additionally, if you want to customize the background, look for `Resources/rsod_overlay.png`. Font customization is taken from `OEMSettings.rpy`.

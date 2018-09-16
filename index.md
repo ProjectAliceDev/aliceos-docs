@@ -42,6 +42,9 @@ permalink: /index
                     <p><pre>
 git clone https://github.com/TheAngelReturns/aliceos.git
                     </pre></p>
+                    <p>
+                        To add the source code directly to your game, take the contents of the root directory and copy them over to your Ren'Py project's <code>game</code> folder.
+                    </p>
                 </div>
             </div>
         </div>

@@ -112,3 +112,6 @@ Presents a temporary banner at the top of the screen. Automatically dismisses af
 <pre><code class = "prettyprint lang-py">
 call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
 </code></pre>
+
+## Customizing notifications
+Backgrounds for the notification frames are located in the `Resources` directory. Any additional font customizations are taken from `OEMSettings.rpy`.
