@@ -13,7 +13,7 @@ permalink: /index
 <div class="p-strip--image is-dark" id = "docs-hero">
     <div class="p-content__row shadow">
         <div class="col-8">
-            <h1>AliceOS Documentation (Technical Preview 1)</h1>
+            <h1>AliceOS Documentation (master)</h1>
             <p>AliceOS brings new features and experiences to any Ren'Py project. From giving users notifications to its extensibility with Applets, AliceOS makes any visual novel more exciting and enriching for its players and developers.</p>
         </div>
     </div>
@@ -24,21 +24,15 @@ permalink: /index
             <div class="col-12">
                 <h2>Getting started</h2>
                 <div>
-                    <p>There are a few ways to add AliceOS to your Ren'Py project.</p>
-                </div>
-            </div>
-        </div>
-        <hr class="is-deep">
-        <div class="u-equal-height">
-            <div class="col-12">
-                <h3>Install from source</h3>
-                <div>
                     <p>If you want to use AliceOS with any particular version of the Ren'Py SDK, it's best to grab a copy of the source code and compile it manually:</p>
                     <p><pre>
 git clone https://github.com/TheAngelReturns/aliceos.git
                     </pre></p>
                     <p>
                         To add the source code directly to your game, take the contents of the root directory and copy them over to your Ren'Py project's <code>game</code> folder.
+                    </p>
+                    <p class="p-notification__response">
+                        <span class="p-notification__status">Important:</span>Back up your data and settings before performing an upgrade to AliceOS. Some features or settings may be overwritten when <code>git fetch; git pull</code> is run.
                     </p>
                 </div>
             </div>
