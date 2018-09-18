@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Ren'Py Applet | Documentation</title>
+    <title>System Applet (Pendleton) | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,18 +121,18 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/renpy.md"
+                  <option value="../../0.1.2ddtar/applets/pendleton.md"
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/renpy.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/applets/pendleton.md"
                     
                   >master
                   </option>
@@ -289,7 +289,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="renpy.html">
+                            <a class="p-link--soft" href="renpy.html">
                           
                           
                             Ren'Py applet
@@ -302,7 +302,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft is-active" href="pendleton.html">
                           
                           
                             System applet
@@ -421,17 +421,18 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
-<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
+                    <h1 id="system-applet-(pendleton)">System Applet (Pendleton)<a class="anchor" href="#system-applet-(pendleton)"></a></h1>
+<p>AliceOS comes with a unique applet designed for system notifications and processes that must be executed in such a manner: Pendleton.</p>
 <h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
 <ul>
-<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
-<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
-<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
-<li><code>author</code> - Ren'Py Team</li>
+<li><code>short_name</code> - Pendleton</li>
+<li><code>long_name</code> - AliceOS System</li>
+<li><code>version</code> - Uses AliceOS version</li>
+<li><code>author</code> - AliceOS Developers</li>
 <li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Uses <code>gui.about</code></li>
+<li><code>description</code> - Send system notifications.</li>
 </ul>
+<p>In code, Pendleton is called as <code>SystemUIServer</code>.</p>
                 </div>
               </div>
             </div>

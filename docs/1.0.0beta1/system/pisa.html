@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Ren'Py Applet | Documentation</title>
+    <title>Setup wizard | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,18 +121,19 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/renpy.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/renpy.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/system/pisa.md"
                     
                   >master
                   </option>
@@ -187,7 +188,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/bootloader.html">
+                            <a class="p-link--soft" href="bootloader.html">
                           
                           
                             Boot screens
@@ -200,7 +201,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/pisa.html">
+                            <a class="p-link--soft is-active" href="pisa.html">
                           
                           
                             Setup wizard
@@ -213,7 +214,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/notifications.html">
+                            <a class="p-link--soft" href="notifications.html">
                           
                           
                             Notifications
@@ -226,7 +227,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/rsods.html">
+                            <a class="p-link--soft" href="rsods.html">
                           
                           
                             Stop errors
@@ -239,7 +240,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/oem.html">
+                            <a class="p-link--soft" href="oem.html">
                           
                           
                             OEM settings
@@ -263,7 +264,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -276,7 +277,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -289,7 +290,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -302,7 +303,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -352,55 +353,55 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                          <a class="p-link--soft" href="bootloader.html">Boot screens</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/pisa.html">Setup wizard</a>
+                          <a class="p-link--soft" href="pisa.html">Setup wizard</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                          <a class="p-link--soft" href="notifications.html">Notifications</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/rsods.html">Stop errors</a>
+                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/oem.html">OEM settings</a>
+                          <a class="p-link--soft" href="oem.html">OEM settings</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
@@ -421,17 +422,26 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
-<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
-<h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
+                    <h1 id="post-installation-setup-assistant-(pisa)">Post installation setup assistant (Pisa)<a class="anchor" href="#post-installation-setup-assistant-(pisa)"></a></h1>
+<p>AliceOS comes bundled with a setup assistant to allow users to configure AliceOS and the game before starting it for the first time. By default, the setup assistant completes the following tasks:</p>
 <ul>
-<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
-<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
-<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
-<li><code>author</code> - Ren'Py Team</li>
-<li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Uses <code>gui.about</code></li>
+<li>Introduce players to the beta mode, if applicable.</li>
+<li>Display licenses that need to be agreed to before starting.</li>
+<li>Creating a username for use in-game.</li>
 </ul>
+<p><img alt="The entry screen to Pisa" src="../../media/img/pisa-enter.png" /></p>
+<h2 id="license-agreements">License agreements<a class="anchor" href="#license-agreements"></a></h2>
+<p><img alt="License agreement screen" src="../../media/img/pisa-license.png" /></p>
+<p>The license agreement screens are usually the first screen presented to the user after starting the setup assistant. In all AliceOS distributions, the first license (if not only) will display a summary of the GNU GPL v3 license. The user must agree to the terms to continue. Otherwise, the setup assistant will halt and a Stop error is thrown.</p>
+<p>Additionally, if your game includes its own license agreement or disclaimer, it can be called and acted in the same way.</p>
+<h2 id="account-creation">Account creation<a class="anchor" href="#account-creation"></a></h2>
+<p><img alt="The account creation screen" src="../../media/img/pisa-accounts.png" /></p>
+<p>The other major component includes the user account creation screen. This screen allows users to enter in a name that is presented in-game via the variable <code>persistent.playername</code>. It also creates a <code>profiles.moj</code> file with <code>sierra</code> as the "password".</p>
+<h2 id="customizing-the-setup-assistant">Customizing the setup assistant<a class="anchor" href="#customizing-the-setup-assistant"></a></h2>
+<p><img alt="A custom setup assistant" src="../../media/img/pisa-custom.png" /></p>
+<p>The setup assistant can be customized with special branding, colors, or fonts. Typically, these screens rely on assets found in the <code>Resources</code> folder, but they can optionally point to new files. The source file to edit this assistant can be located in <code>CoreServices/Setup.rpy</code>. These files also are subject to OEM customization rules set out in <code>OEMSettings.rpy</code>.</p>
+<p><img alt="A custom setup assistant screen" src="../../media/img/pisa-custom-step.png" /></p>
+<p>In addition to modifying the look of the Setup screen, developers can add additional steps to the Setup process as per the code found in <code>Setup.rpy</code>.</p>
                 </div>
               </div>
             </div>
@@ -465,7 +475,9 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#license-agreements">License agreements</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#account-creation">Account creation</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#customizing-the-setup-assistant">Customizing the setup assistant</a></li>
               </ul>
             </nav>
           </div>

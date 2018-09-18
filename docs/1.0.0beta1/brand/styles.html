@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Ren'Py Applet | Documentation</title>
+    <title>Stylesheet | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,18 +121,19 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/renpy.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/renpy.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/brand/styles.md"
                     
                   >master
                   </option>
@@ -263,7 +264,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -276,7 +277,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -289,7 +290,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -302,7 +303,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -326,7 +327,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/styles.html">
+                            <a class="p-link--soft is-active" href="styles.html">
                           
                           
                             Stylesheet
@@ -382,31 +383,31 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/styles.html">Stylesheet</a>
+                          <a class="p-link--soft" href="styles.html">Stylesheet</a>
                         
                       </li>
                     
@@ -421,17 +422,22 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
-<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
-<h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
-<ul>
-<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
-<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
-<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
-<li><code>author</code> - Ren'Py Team</li>
-<li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Uses <code>gui.about</code></li>
-</ul>
+                    <h1 id="aliceos-stylesheet">AliceOS Stylesheet<a class="anchor" href="#aliceos-stylesheet"></a></h1>
+<p>To create a unique stylesheet that matches the vibrancy and openness of AliceOS, we've created a special style system, <strong>Acolyte</strong>, to accomplish this.</p>
+<h2 id="design-languages">Design languages<a class="anchor" href="#design-languages"></a></h2>
+<p>AliceOS follows a combination of the [Material design language]
+(https://material.io) and Canonical's <a href="https://vanillaframework.io">Vanilla design language</a>. While Vanilla provides the basic structure, Material adds additional design features such as shadows to provide a cohesive interface.</p>
+<p>For those wanting to make websites using this combined system, we recommend linking to our CSS stylesheet:</p>
+<pre><code class = "prettyprint lang-html">
+&lt;link rel="stylesheet" href="https://aliceos.app/assets/css/main.css"&gt;
+</code></pre>
+
+<h2 id="default-font">Default font<a class="anchor" href="#default-font"></a></h2>
+<p><img alt="Nunito font" src="https://il.static.1001fonts.net/n/u/nunito-font-5-original.png" /></p>
+<p>AliceOS's default font family is <em>Nunito</em>, which is freely provided by Google Fonts as well as within AliceOS. Nunito provides readable text that looks and feels modern as well as matching closely to AliceOS's brand font, Comfortaa.</p>
+<h2 id="colors">Colors<a class="anchor" href="#colors"></a></h2>
+<p>We've adopted the <a href="https://elementary.io/docs/human-interface-guidelines#color">ElementaryOS color palette</a> as our default color palette for its vibrancy and clarity in context.</p>
+<p><img alt="Elementary color palette" src="../../media/img/colors.png" /></p>
                 </div>
               </div>
             </div>
@@ -465,7 +471,9 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#design-languages">Design languages</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#default-font">Default font</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#colors">Colors</a></li>
               </ul>
             </nav>
           </div>

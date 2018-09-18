@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Ren'Py Applet | Documentation</title>
+    <title>OEM settings | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,18 +121,19 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/renpy.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/renpy.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/system/oem.md"
                     
                   >master
                   </option>
@@ -187,7 +188,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/bootloader.html">
+                            <a class="p-link--soft" href="bootloader.html">
                           
                           
                             Boot screens
@@ -200,7 +201,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/pisa.html">
+                            <a class="p-link--soft" href="pisa.html">
                           
                           
                             Setup wizard
@@ -213,7 +214,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/notifications.html">
+                            <a class="p-link--soft" href="notifications.html">
                           
                           
                             Notifications
@@ -226,7 +227,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/rsods.html">
+                            <a class="p-link--soft" href="rsods.html">
                           
                           
                             Stop errors
@@ -239,7 +240,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/oem.html">
+                            <a class="p-link--soft is-active" href="oem.html">
                           
                           
                             OEM settings
@@ -263,7 +264,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -276,7 +277,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -289,7 +290,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -302,7 +303,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -352,55 +353,55 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                          <a class="p-link--soft" href="bootloader.html">Boot screens</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/pisa.html">Setup wizard</a>
+                          <a class="p-link--soft" href="pisa.html">Setup wizard</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                          <a class="p-link--soft" href="notifications.html">Notifications</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/rsods.html">Stop errors</a>
+                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/oem.html">OEM settings</a>
+                          <a class="p-link--soft" href="oem.html">OEM settings</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
@@ -421,17 +422,23 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="ren'py-applet">Ren'Py Applet<a class="anchor" href="#ren'py-applet"></a></h1>
-<p>The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to present your visual novel as an AliceOS applet, enabling components like notifications and window management.</p>
-<h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
+                    <h1 id="oem-settings">OEM Settings<a class="anchor" href="#oem-settings"></a></h1>
+<p>AliceOS allows distribution managers and manufacturers to easily change settings and properties of AliceOS in addition to modifying its source code. In the <code>Resources</code> directory, manufactureres can edit the <code>OEMSettings.rpy</code> file to achieve this.</p>
+<h2 id="general-information">General information<a class="anchor" href="#general-information"></a></h2>
+<p>In order to enable the OEM mode and its settings, the following needs to be filled in.</p>
 <ul>
-<li><code>short_name</code> - Uses RenPy's <code>build.name</code></li>
-<li><code>long_name</code> - Uses RenPy's <code>config.name</code></li>
-<li><code>version</code> - Uses RenPy's <code>config.version</code></li>
-<li><code>author</code> - Ren'Py Team</li>
-<li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
-<li><code>description</code> - Uses <code>gui.about</code></li>
+<li><code>aliceos.oem_mode</code> - Whether the OEM mode should be turned on or off. Default is False.</li>
+<li><code>aliceos.oem_name</code> - The OEM's name.</li>
+<li><code>aliceos.oem_website</code> - The OEM's website.</li>
+<li><code>aliceos.oem_support</code> - The email address to which the player can contact for questions regarding the custom distribution of AliceOS.</li>
 </ul>
+<h2 id="custom-fonts">Custom fonts<a class="anchor" href="#custom-fonts"></a></h2>
+<p>For each of the respected variants of AliceOS's fonts, variables exist to acommodate them. Their values should equal the path of where the font file is located in the <code>game</code> folder. For example:</p>
+<pre><code class = "prettyprint lang-py">
+define aliceos.oem_font_regular = "Resources/systemfont/OEM/Regular.ttf"
+</code></pre>
+
+<p>AliceOS will replace the default system font with the ones provided by the OEM if OEM mode is enabled.</p>
                 </div>
               </div>
             </div>
@@ -465,7 +472,8 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#general-information">General information</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#custom-fonts">Custom fonts</a></li>
               </ul>
             </nav>
           </div>
