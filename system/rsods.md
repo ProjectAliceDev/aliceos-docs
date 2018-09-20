@@ -32,5 +32,10 @@ Throws a Stop error and restarts the game.
 
 #### Live example
 <pre><code class = "prettyprint lang-py">
-	call screen ThrowASError("PAGE_FAULT_IN_NON_PAGED_AREA")
+call screen ThrowASError("PAGE_FAULT_IN_NON_PAGED_AREA")
 </code></pre>
+
+### Customizing looks
+Fonts are automatically pulled from OEM settings and will be applied when OEM mode and custom font mode is enabled.
+
+The background is provided in `Resources/rsod_overlay.png`. We recommend setting your base background as Strawberry 500 (`#c6262e`).

@@ -15,7 +15,7 @@ Notifications provide a level of interactivity and information updates for your 
 
 *Alerts* provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.
 
-![Alerts](../media/img/ns-alert.png)
+![Alerts](../media/img/notifications/alert.png)
 
 `alert(title, message, ok_action)`
 
@@ -62,7 +62,7 @@ call screen confirm_alert("Do You Want To Run Alice32?", "Running this software 
 
 *Permissive alerts* are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: `ask_all_permissions()`.
 
-![Permissive Alerts](../media/img/ns-permalert.png)
+![Permissive Alerts](../media/img/notifications/perm.png)
 
 `ask_permission(applet.long_name, action, no_action, yes_action)`
 
@@ -92,7 +92,7 @@ call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_ac
     </p>
 </div>
 
-![Banners](../media/img/ns-banner.png)
+![Banners](../media/img/notifications/banner.png)
 
 `banner(applet, title, message, response)`
 
@@ -114,4 +114,5 @@ call screen banner(ddlc, "New character added!", "Monika's now in the game.", re
 </code></pre>
 
 ## Customizing notifications
+![Custom notification](../media/img/notifications/custom.png)
 Backgrounds for the notification frames are located in the `Resources` directory. Any additional font customizations are taken from `OEMSettings.rpy`.
