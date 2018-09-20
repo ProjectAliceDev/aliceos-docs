@@ -422,25 +422,8 @@
                 <div class = "row">
                   <div class = "col-8">
                     <h1 id="boot-screens">Boot Screens<a class="anchor" href="#boot-screens"></a></h1>
-<p>The boot screen is an important part of any AliceOS project; the boot screen checks the integrity of some parts of the system and informs the user that he/she is using AliceOS. There are two distinct boot screens that AliceOS contains for use. Both of these boot screens perform the same functions.</p>
-<h2 id="standard-boot-screen">Standard boot screen<a class="anchor" href="#standard-boot-screen"></a></h2>
+<p>The boot screen is an important part of any AliceOS project; the boot screen checks the integrity of some parts of the system and informs the user that he/she is using AliceOS.</p>
 <p><img alt="Standard boot screen" src="../../media/img/sbs.png" /></p>
-<p>The standard boot screen is generally used in projects that want to emphasize AliceOS as an integral part of the game. This also indicates that the AliceOS system has not been modified for use or is a first-party mod created by the AliceOS team.</p>
-<h4 id="use-the-standard-boot-screen-if:">Use the standard boot screen if:<a class="anchor" href="#use-the-standard-boot-screen-if:"></a></h4>
-<p><ul class="p-list">
-    <li class="p-list__item is-ticked">The core components of AliceOS have been unchanged</li>
-    <li class="p-list__item is-ticked">The game/mod is created by the AliceOS team or approved partners</li>
-    <li class="p-list__item is-ticked">The AliceOS installation is cusomized through additions</li>
-</ul></p>
-<h2 id="oem-boot-screen">OEM boot screen<a class="anchor" href="#oem-boot-screen"></a></h2>
-<p><img alt="OEM boot screen" src="../../media/img/obs.png" /></p>
-<p>The OEM boot screen is generally used in projects that don't put a heavy emphasis on AliceOS as an integral part of the game. This also indicates that the AliceOS system has been modified heavily for the Ren'Py project specifically or is a third-party mod.</p>
-<h4 id="use-the-oem-boot-screen-if:">Use the OEM boot screen if:<a class="anchor" href="#use-the-oem-boot-screen-if:"></a></h4>
-<p><ul class="p-list">
-    <li class="p-list__item is-ticked">The core components of AliceOS have been changed</li>
-    <li class="p-list__item is-ticked">The game/mod is made by a third party</li>
-    <li class="p-list__item is-ticked">The AliceOS installation is completely customized, including branding assets</li>
-</ul></p>
 <h2 id="implementation">Implementation<a class="anchor" href="#implementation"></a></h2>
 <p>To incorporate this into your project, add the following lines to the beginning your <code>splashscreen</code> label:
 <pre><code class = "prettyprint lang-py">
@@ -480,11 +463,7 @@ call bootloader
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#standard-boot-screen">Standard boot screen</a>
-</li>
-<li class="p-toc__item"><a class="p-toc__link" href="#oem-boot-screen">OEM boot screen</a>
-</li>
-<li class="p-toc__item"><a class="p-toc__link" href="#implementation">Implementation</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#implementation">Implementation</a></li>
               </ul>
             </nav>
           </div>

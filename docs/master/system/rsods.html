@@ -423,7 +423,7 @@
                   <div class = "col-8">
                     <h1 id="stop-errors">Stop errors<a class="anchor" href="#stop-errors"></a></h1>
 <p>Stop errors (red screens of death) are system-wide errors that occur when a problem with the operating system has been reached. These errors are similar to ones found in Windows 8 and can be customised to the developer's needs.
-<img alt="Standard boot screen" src="../../media/img/rsod.png" /></p>
+<img alt="Standard boot screen" src="../../media/img/rsod/default.png" /></p>
 <h2 id="typical-stop-errors">Typical stop errors<a class="anchor" href="#typical-stop-errors"></a></h2>
 <ul>
 <li><code>INACCESSIBLE_BOOT_DEVICE</code> - the file required to start the integrity check process is missing.</li>
@@ -440,8 +440,17 @@
 <li>A component needed for a system action was not initialized or made accessible.</li>
 </ul>
 <h2 id="customizing-stop-errors">Customizing Stop errors<a class="anchor" href="#customizing-stop-errors"></a></h2>
-<p><img alt="Standard boot screen" src="../../media/img/rsod_custom.png" /></p>
-<p>The source code for Stop error displays are found in <code>CoreServices\ASErrorHandler.rpy</code>. Additionally, if you want to customize the background, look for <code>Resources/rsod_overlay.png</code>. Font customization is taken from <code>OEMSettings.rpy</code>.</p>
+<p><img alt="Standard boot screen" src="../../media/img/rsod/custom.png" /></p>
+<p>To call a Stop error at any point in your visual novel project, run <code>call screen ThrowASError()</code>.</p>
+<h3 id="throwaserrorerror_type"><code>ThrowASError(error_type)</code></h3>
+<p>Throws a Stop error and restarts the game.</p>
+<ul>
+<li>error_type - the Stop error code to be displayed. AliceOS comes with three defaults, but additional ones can be added in OEM settings or directly called in the function.</li>
+</ul>
+<h4 id="live-example">Live example<a class="anchor" href="#live-example"></a></h4>
+<p><pre><code class = "prettyprint lang-py">
+    call screen ThrowASError("PAGE_FAULT_IN_NON_PAGED_AREA")
+</code></pre></p>
                 </div>
               </div>
             </div>
@@ -477,7 +486,8 @@
               <ul class="p-list">
                 <li class="p-toc__item"><a class="p-toc__link" href="#typical-stop-errors">Typical stop errors</a></li>
 <li class="p-toc__item"><a class="p-toc__link" href="#typical-causes-of-stop-errors">Typical causes of Stop errors</a></li>
-<li class="p-toc__item"><a class="p-toc__link" href="#customizing-stop-errors">Customizing Stop errors</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#customizing-stop-errors">Customizing Stop errors</a>
+</li>
               </ul>
             </nav>
           </div>
