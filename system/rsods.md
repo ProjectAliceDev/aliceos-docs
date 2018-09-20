@@ -3,7 +3,7 @@ title: Stop errors
 ---
 # Stop errors
 Stop errors (red screens of death) are system-wide errors that occur when a problem with the operating system has been reached. These errors are similar to ones found in Windows 8 and can be customised to the developer's needs.
-![Standard boot screen](../media/img/rsod.png)
+![Standard boot screen](../media/img/rsod/default.png)
 
 ## Typical stop errors
 - `INACCESSIBLE_BOOT_DEVICE` - the file required to start the integrity check process is missing.
@@ -21,6 +21,16 @@ These may or may not apply to each Stop error, but these are common causes for s
 - A component needed for a system action was not initialized or made accessible.
 
 ## Customizing Stop errors
-![Standard boot screen](../media/img/rsod_custom.png)
+![Standard boot screen](../media/img/rsod/custom.png)
 
-The source code for Stop error displays are found in `CoreServices\ASErrorHandler.rpy`. Additionally, if you want to customize the background, look for `Resources/rsod_overlay.png`. Font customization is taken from `OEMSettings.rpy`.
+To call a Stop error at any point in your visual novel project, run `call screen ThrowASError()`.
+
+### `ThrowASError(error_type)`
+Throws a Stop error and restarts the game.
+
+- error_type - the Stop error code to be displayed. AliceOS comes with three defaults, but additional ones can be added in OEM settings or directly called in the function.
+
+#### Live example
+<pre><code class = "prettyprint lang-py">
+	call screen ThrowASError("PAGE_FAULT_IN_NON_PAGED_AREA")
+</code></pre>
