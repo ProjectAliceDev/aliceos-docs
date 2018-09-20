@@ -423,22 +423,45 @@
                 <div class = "row">
                   <div class = "col-8">
                     <h1 id="oem-settings">OEM Settings<a class="anchor" href="#oem-settings"></a></h1>
-<p>AliceOS allows distribution managers and manufacturers to easily change settings and properties of AliceOS in addition to modifying its source code. In the <code>Resources</code> directory, manufactureres can edit the <code>OEMSettings.rpy</code> file to achieve this.</p>
+<p>AliceOS allows distribution managers and manufacturers to easily change settings and properties of AliceOS in addition to modifying its source code. In the <code>Resources</code> directory, manufacturers can edit the <code>OEMSettings.rpy</code> file to achieve this.</p>
 <h2 id="general-information">General information<a class="anchor" href="#general-information"></a></h2>
 <p>In order to enable the OEM mode and its settings, the following needs to be filled in.</p>
 <ul>
 <li><code>aliceos.oem_mode</code> - Whether the OEM mode should be turned on or off. Default is False.</li>
-<li><code>aliceos.oem_name</code> - The OEM's name.</li>
-<li><code>aliceos.oem_website</code> - The OEM's website.</li>
-<li><code>aliceos.oem_support</code> - The email address to which the player can contact for questions regarding the custom distribution of AliceOS.</li>
+<li><code>aliceos_oem_info</code> - Field for entering in provider details. An example is provided below:</li>
 </ul>
-<h2 id="custom-fonts">Custom fonts<a class="anchor" href="#custom-fonts"></a></h2>
-<p>For each of the respected variants of AliceOS's fonts, variables exist to acommodate them. Their values should equal the path of where the font file is located in the <code>game</code> folder. For example:</p>
 <pre><code class = "prettyprint lang-py">
-define aliceos.oem_font_regular = "Resources/systemfont/OEM/Regular.ttf"
+oem_info = """\
+OEM Name: Aperture Laboratories
+OEM Website: https://aperturescience.com
+OEM Support Email: contact@aperturescience.com
+
+For distribution with Aperture Science products only. If this policy is violated, please contact the support team with the email address above.
+"""
 </code></pre>
 
-<p>AliceOS will replace the default system font with the ones provided by the OEM if OEM mode is enabled.</p>
+<h2 id="licenses">Licenses<a class="anchor" href="#licenses"></a></h2>
+<p>AliceOS generally displays two license agreement prompts: the standard GNU GPL license for the platform and an OEM's agreement, usually describing the game's nature (eg. disclaimers, IP guidelines, etc.). To write your license, edit the license field:</p>
+<pre><code class = "prettyprint lang-py">
+license = """\
+No license found.
+"""
+</code></pre>
+
+<p>If you do not wish to add an additional license, simply leave the field to its default value, <code>No license found</code>.</p>
+<h2 id="custom-fonts">Custom fonts<a class="anchor" href="#custom-fonts"></a></h2>
+<p>By default, custom fonts are disabled. To enable them, set <code>aliceos.oem_use_custom_font</code> to <code>True</code>. Note that you'll need to have your font files in <code>Resources/systemfont/OEM/</code> and they must be TrueType fonts.</p>
+<div class="codehilite"><pre><span></span>Resources/systemfont/OEM/Regular.ttf
+Resources/systemfont/OEM/Bold.ttf
+Resources/systemfont/OEM/Italic.ttf
+Resources/systemfont/OEM/Black.ttf
+Resources/systemfont/OEM/Medium.ttf
+Resources/systemfont/OEM/Thin.ttf
+...
+</pre></div>
+
+
+<p>If you want the font to appear larger in the <a href="pisa.html">Setup assistant</a>, set <code>aliceos.oem_large_pisa_font</code> to <code>True</code>.</p>
                 </div>
               </div>
             </div>
@@ -473,6 +496,7 @@ define aliceos.oem_font_regular = "Resources/systemfont/OEM/Regular.ttf"
             <nav class="p-aside__nav">
               <ul class="p-list">
                 <li class="p-toc__item"><a class="p-toc__link" href="#general-information">General information</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#licenses">Licenses</a></li>
 <li class="p-toc__item"><a class="p-toc__link" href="#custom-fonts">Custom fonts</a></li>
               </ul>
             </nav>

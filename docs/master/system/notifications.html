@@ -430,7 +430,7 @@
 </div></p>
 <h2 id="alerts">Alerts<a class="anchor" href="#alerts"></a></h2>
 <p><em>Alerts</em> provide a message that requires an action, usually by pushing a button. They can be terse or have details with a title and message.</p>
-<p><img alt="Alerts" src="../../media/img/ns-alert.png" /></p>
+<p><img alt="Alerts" src="../../media/img/notifications/alert.png" /></p>
 <p><code>alert(title, message, ok_action)</code></p>
 <p>Presents an alert to the user that requires an action.</p>
 <ul>
@@ -471,7 +471,7 @@ call screen confirm_alert("Do You Want To Run Alice32?", "Running this software 
 
 <h2 id="permissive-alerts">Permissive Alerts<a class="anchor" href="#permissive-alerts"></a></h2>
 <p><em>Permissive alerts</em> are alerts that require the player to grant access to parts of the AliceOS system. These usually include sending notifications, modifying the file system, and changing system settings. Applets have a native function for asking all of its permissions accordingly: <code>ask_all_permissions()</code>.</p>
-<p><img alt="Permissive Alerts" src="../../media/img/ns-permalert.png" /></p>
+<p><img alt="Permissive Alerts" src="../../media/img/notifications/perm.png" /></p>
 <p><code>ask_permission(applet.long_name, action, no_action, yes_action)</code></p>
 <p>Asks the user permission to perform an action or to access a
 system-related function.</p>
@@ -497,7 +497,7 @@ call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_ac
     </p>
 </div>
 
-<p><img alt="Banners" src="../../media/img/ns-banner.png" /></p>
+<p><img alt="Banners" src="../../media/img/notifications/banner.png" /></p>
 <p><code>banner(applet, title, message, response)</code></p>
 <p>Presents a temporary banner at the top of the screen. Automatically dismisses after five seconds and returns a value of <code>0</code>.</p>
 <ul>
@@ -517,7 +517,8 @@ call screen banner(ddlc, "New character added!", "Monika's now in the game.", re
 </code></pre>
 
 <h2 id="customizing-notifications">Customizing notifications<a class="anchor" href="#customizing-notifications"></a></h2>
-<p>Backgrounds for the notification frames are located in the <code>Resources</code> directory. Any additional font customizations are taken from <code>OEMSettings.rpy</code>.</p>
+<p><img alt="Custom notification" src="../../media/img/notifications/custom.png" />
+Backgrounds for the notification frames are located in the <code>Resources</code> directory. Any additional font customizations are taken from <code>OEMSettings.rpy</code>.</p>
                 </div>
               </div>
             </div>
