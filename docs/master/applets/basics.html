@@ -455,18 +455,20 @@
     Applets/
         AppletName/
             AppletName.rpy
-            AppletName.rpyc
+            src/
             Resources/
-            icons/
-                applet_16.png
-                applet_24.png
-                applet_32.png
-                applet_64.png
-                applet_128.png
+                icons/
+                    16.png
+                    24.png
+                    32.png
+                    48.png
+                    64.png
+                    128.png
+                    256.png
 </pre></div>
 
 
-<p>The Applet itself, as well as its manifest, is located in its source code. Additional resources such as applet icons, images, etc., are located in the <code>Resources</code> folder.</p>
+<p>The Applet itself, as well as its manifest, is located in its source code. Additional source code such as libraries or extra files are located in the <code>src</code> folder, usually. Additional resources such as applet icons, images, etc., are located in the <code>Resources</code> folder.</p>
 <h2 id="manifest">Manifest<a class="anchor" href="#manifest"></a></h2>
 <p>Every applet contains a manifest and essential function list as a Python class of the object <code>Applet</code>. This manifest provides data such as applet names, authors, icons, and the permissions required.</p>
 <h3 id="the-">The <code>Applet()</code> class<a class="anchor" href="#the-"></a></h3>

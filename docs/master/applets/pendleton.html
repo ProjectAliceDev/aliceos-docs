@@ -452,6 +452,13 @@
 <li><code>description</code> - Send system notifications.</li>
 </ul>
 <p>In code, Pendleton is called as <code>SystemUIServer</code>.</p>
+<h2 id="sending-notifications">Sending notifications<a class="anchor" href="#sending-notifications"></a></h2>
+<p>To send a notification on the behalf of the system, use Pendleton's <code>send_temporary_notification()</code> functionality. However, there are certain cases in which this should be used:</p>
+<ul class="p-list">
+    <li class="p-list__item is-ticked">A system action is performed (eg. file save, user added)</li>
+    <li class="p-list__item is-ticked">An update or more information on the system is available</li>
+    <li class="p-list__item is-ticked">Anything that does not pertain to an Applet, both first-party and third-party</li>
+</ul>
                 </div>
               </div>
             </div>
@@ -486,6 +493,7 @@
             <nav class="p-aside__nav">
               <ul class="p-list">
                 <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#sending-notifications">Sending notifications</a></li>
               </ul>
             </nav>
           </div>

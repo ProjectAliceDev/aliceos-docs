@@ -525,12 +525,6 @@ call screen ask_permission(ddlc.long_name, allow_fs, no_action=Return(1), yes_ac
 <li><code>message</code> - the message or details</li>
 <li><code>response</code> - function called when the user presses Respond</li>
 </ul>
-<div class="p-notification--information">
-  <p class="p-notification__response">
-    <span class="p-notification__status">Note:</span>If you need something "quick n' dirty", you can also make use of <code>renpy.notify()</code>; however,you won't have the same control as <code>banner()</code>.
-  </p>
-</div>
-
 <pre><code class = "prettyprint lang-py">
 call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
 </code></pre>
