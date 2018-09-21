@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Boot Screens | Documentation</title>
+    <title>Backgrounds | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,12 +121,14 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/system/bootloader.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/system/bootloader.md"
+                  <option value="None"
+                    disabled
                     
                   >1.0.0beta1
                   </option>
@@ -187,7 +189,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="bootloader.html">
+                            <a class="p-link--soft" href="../system/bootloader.html">
                           
                           
                             Boot screens
@@ -200,7 +202,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pisa.html">
+                            <a class="p-link--soft" href="../system/pisa.html">
                           
                           
                             Setup wizard
@@ -213,7 +215,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="notifications.html">
+                            <a class="p-link--soft" href="../system/notifications.html">
                           
                           
                             Notifications
@@ -226,7 +228,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="rsods.html">
+                            <a class="p-link--soft" href="../system/rsods.html">
                           
                           
                             Stop errors
@@ -239,7 +241,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="oem.html">
+                            <a class="p-link--soft" href="../system/oem.html">
                           
                           
                             OEM settings
@@ -326,7 +328,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/styles.html">
+                            <a class="p-link--soft" href="styles.html">
                           
                           
                             Stylesheet
@@ -339,7 +341,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/backgrounds.html">
+                            <a class="p-link--soft is-active" href="backgrounds.html">
                           
                           
                             Backgrounds
@@ -365,31 +367,31 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="bootloader.html">Boot screens</a>
+                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pisa.html">Setup wizard</a>
+                          <a class="p-link--soft" href="../system/pisa.html">Setup wizard</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="notifications.html">Notifications</a>
+                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
+                          <a class="p-link--soft" href="../system/rsods.html">Stop errors</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="oem.html">OEM settings</a>
+                          <a class="p-link--soft" href="../system/oem.html">OEM settings</a>
                         
                       </li>
                     
@@ -419,13 +421,13 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/styles.html">Stylesheet</a>
+                          <a class="p-link--soft" href="styles.html">Stylesheet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/backgrounds.html">Backgrounds</a>
+                          <a class="p-link--soft" href="backgrounds.html">Backgrounds</a>
                         
                       </li>
                     
@@ -440,15 +442,33 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="boot-screens">Boot Screens<a class="anchor" href="#boot-screens"></a></h1>
-<p>The boot screen is an important part of any AliceOS project; the boot screen checks the integrity of some parts of the system and informs the user that he/she is using AliceOS.</p>
-<p><img alt="Standard boot screen" src="../../media/img/sbs.png" /></p>
-<h2 id="implementation">Implementation<a class="anchor" href="#implementation"></a></h2>
-<p>To incorporate this into your project, add the following lines to the beginning your <code>splashscreen</code> label:
-<pre><code class = "prettyprint lang-py">
-call bootloader
-</code></pre></p>
-<p>The project, depending on your settings in <code>OEMSettings.rpy</code>, will determine which boot screen to display.</p>
+                    <h1 id="backgrounds">Backgrounds<a class="anchor" href="#backgrounds"></a></h1>
+<p>AliceOS comes with a unique set of backgrounds that include different art types. OEM manufacturers may want to replicate this style in their own AliceOS distributions to maintain consistency.</p>
+<h2 id="background-bases">Background bases<a class="anchor" href="#background-bases"></a></h2>
+<p>AliceOS backgrounds usually have abstract, low-poly art as the base. This type of art stems from some backgrounds and designs Canonical uses for Ubuntu and Vanilla design as a whole.</p>
+<p><img alt="Default wallpaper for Ubuntu 17.04" src="../../media/img/brand/ubuntu.png" /></p>
+<p>In most cases, the AliceOS team uses the <a href="https://trianglify.io">Trianglify</a> web tool to achieve this effect. The tool is free and allows for the result product to be freely used anywhere.</p>
+<p><img alt="Trianglify web tool" src="../../media/img/brand/trianglify.png" /></p>
+<p>There are a few things we do to make ours unique:</p>
+<ul>
+<li>We use a 16:9 aspect ratio so that it scales well with Ren'Py backgrounds and widescreen displays. Most backgrounds are 1280x720, but a higher resolution can be set.</li>
+<li>We use the colors found in the Elementary stylesheet as per our own style code (see <a href="styles.html#colors">Colors</a>).</li>
+</ul>
+<h2 id="sketches">Sketches<a class="anchor" href="#sketches"></a></h2>
+<p>Our foreground part of AliceOS backgrounds contain sketches by the CG and special case artist for our sister project, DDTAR, Noelia. These sketches are layered on top of the poly art and blended with either "Color Dodge", "Multiply", or "Linear Burn". To achieve this effect with any piece of art, including colored images, we recommend the following:</p>
+<ul>
+<li>Convert the color image to grayscale/black and white. This makes blending a lot easier and less "ugly".</li>
+<li>Play with the blending modes available in your photo editor to achieve the desired effect. Some pieces of art require different blending modes.</li>
+<li>Remove unnecessary content, such as backgrounds. This helps keep the focus to the art itself, not its surrounding content.</li>
+</ul>
+<p><img alt="Alice RSOD death sketch" src="../../media/img/brand/sketch.jpg" /></p>
+<h2 id="special-cases">Special cases<a class="anchor" href="#special-cases"></a></h2>
+<p>At other times, AliceOS uses photos or poly-art overlays to achieve such effects:</p>
+<ul>
+<li>We will use grayscale poly art as an addition, blended layer if needed.</li>
+<li>Photos are adjusted to have less emphasis so that the poly art can blend well with it.</li>
+<li>A base color is set in the back and the sketch is applied before the poly-art overlay.</li>
+</ul>
                 </div>
               </div>
             </div>
@@ -482,7 +502,9 @@ call bootloader
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#implementation">Implementation</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#background-bases">Background bases</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#sketches">Sketches</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#special-cases">Special cases</a></li>
               </ul>
             </nav>
           </div>
