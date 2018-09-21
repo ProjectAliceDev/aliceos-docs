@@ -17,3 +17,12 @@ Applet Information
 -   `description` - Send system notifications.
 
 In code, Pendleton is called as `SystemUIServer`.
+
+## Sending notifications
+To send a notification on the behalf of the system, use Pendleton's `send_temporary_notification()` functionality. However, there are certain cases in which this should be used:
+
+<ul class="p-list">
+    <li class="p-list__item is-ticked">A system action is performed (eg. file save, user added)</li>
+    <li class="p-list__item is-ticked">An update or more information on the system is available</li>
+    <li class="p-list__item is-ticked">Anything that does not pertain to an Applet, both first-party and third-party</li>
+</ul>

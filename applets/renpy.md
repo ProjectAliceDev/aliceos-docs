@@ -9,8 +9,8 @@ The Ren'Py Applet, also known as "Ren'Py VN Engine", is a quick and dirty way to
 Applet Information
 ------------------
 
--   `short_name` - Uses RenPy's `build.name`
--   `long_name` - Uses RenPy's `config.name`
+-   `short_name` - My Ren'Py VN
+-   `long_name` - My Ren'Py VN
 -   `version` - Uses RenPy's `config.version`
 -   `author` - Ren'Py Team
 -   `permissions` - `pm_notify`, `pm_files`, `pm_sysadmin`

@@ -103,12 +103,6 @@ Presents a temporary banner at the top of the screen. Automatically dismisses af
 -   `message` - the message or details
 -   `response` - function called when the user presses Respond
 
-<div class="p-notification--information">
-  <p class="p-notification__response">
-    <span class="p-notification__status">Note:</span>If you need something "quick n' dirty", you can also make use of <code>renpy.notify()</code>; however,you won't have the same control as <code>banner()</code>.
-  </p>
-</div>
-
 <pre><code class = "prettyprint lang-py">
 call screen banner(ddlc, "New character added!", "Monika's now in the game.", response=Return(1))
 </code></pre>

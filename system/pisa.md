@@ -43,6 +43,7 @@ The username input page prompts users to type in a name. Setup will automaticall
 ![Custom](../media/img/pisa/custom.png)
 ### OEM settings
 Pisa will adhere to the following OEM settings:
+
 - OEM mode
 - OEM fonts (text will be rendered and justified accordingly)
 - OEM information (displayed in provider details)

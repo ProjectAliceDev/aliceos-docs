@@ -23,16 +23,18 @@ The overall structure of an applet in AliceOS looks like this:
         Applets/
             AppletName/
                 AppletName.rpy
-                AppletName.rpyc
+                src/
                 Resources/
-                icons/
-                    applet_16.png
-                    applet_24.png
-                    applet_32.png
-                    applet_64.png
-                    applet_128.png
+                    icons/
+                        16.png
+                        24.png
+                        32.png
+                        48.png
+                        64.png
+                        128.png
+                        256.png
 
-The Applet itself, as well as its manifest, is located in its source code. Additional resources such as applet icons, images, etc., are located in the `Resources` folder.
+The Applet itself, as well as its manifest, is located in its source code. Additional source code such as libraries or extra files are located in the `src` folder, usually. Additional resources such as applet icons, images, etc., are located in the `Resources` folder.
 
 Manifest
 --------
