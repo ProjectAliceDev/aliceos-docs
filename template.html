@@ -76,7 +76,10 @@
       /* Backwards compatibility for docs with no nav logo */
       .p-navigation__logo {
         align-items: center;
-        padding-right: 32px;
+      }
+
+      #logo {
+        color: #f9c440;
       }
 
       .p-navigation__logo .p-navigation__link {
@@ -147,8 +150,9 @@
         <header id="navigation" class="p-navigation">
           <div class="p-navigation__banner">
             <div class="p-navigation__logo">
-              <a class="p-navigation__link" href="{{ site_logo_href }}">
-                <img class="p-navigation__image" src="{{ site_logo_url }}" alt="{{ site_title }} logo">docs
+              <a class="p-navigation__link is-selected" href="{{ site_logo_href }}" id="logo">
+                alice &bull; os
+                <!--<img class="p-navigation__image" src="{{ site.baseurl }}/assets/img/logomark.svg" alt="alice &bull; os&nbsp;">-->
               </a>
             </div>
           </div>
