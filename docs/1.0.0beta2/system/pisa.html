@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Applet Security | Documentation</title>
+    <title>Setup wizard | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,23 +121,24 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/security.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/security.md"
+                  <option value="../../1.0.0beta1/system/pisa.md"
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value="../../1.0.0beta2/applets/security.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta2
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/system/pisa.md"
                     
                   >master
                   </option>
@@ -192,7 +193,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/bootloader.html">
+                            <a class="p-link--soft" href="bootloader.html">
                           
                           
                             Boot screens
@@ -205,7 +206,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/pisa.html">
+                            <a class="p-link--soft is-active" href="pisa.html">
                           
                           
                             Setup wizard
@@ -218,7 +219,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/notifications.html">
+                            <a class="p-link--soft" href="notifications.html">
                           
                           
                             Notifications
@@ -231,7 +232,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/rsods.html">
+                            <a class="p-link--soft" href="rsods.html">
                           
                           
                             Stop errors
@@ -244,7 +245,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../system/oem.html">
+                            <a class="p-link--soft" href="oem.html">
                           
                           
                             OEM settings
@@ -268,7 +269,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -281,7 +282,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -294,7 +295,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -307,7 +308,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -370,55 +371,55 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/bootloader.html">Boot screens</a>
+                          <a class="p-link--soft" href="bootloader.html">Boot screens</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/pisa.html">Setup wizard</a>
+                          <a class="p-link--soft" href="pisa.html">Setup wizard</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/notifications.html">Notifications</a>
+                          <a class="p-link--soft" href="notifications.html">Notifications</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/rsods.html">Stop errors</a>
+                          <a class="p-link--soft" href="rsods.html">Stop errors</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../system/oem.html">OEM settings</a>
+                          <a class="p-link--soft" href="oem.html">OEM settings</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
@@ -445,24 +446,69 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="applet-security">Applet Security<a class="anchor" href="#applet-security"></a></h1>
-<p>AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.</p>
-<h2 id="security-overview">Security Overview<a class="anchor" href="#security-overview"></a></h2>
-<p>For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:</p>
-<h3 id="policy-1:-valid-package-identifier">Policy 1: Valid Package Identifier<a class="anchor" href="#policy-1:-valid-package-identifier"></a></h3>
-<p>Policy will only permit launch of application from entrypoint if identifier is a proper identifier. Policy will prevent launch of app if identifier is incorrect and would log a application error.</p>
-<h3 id="policy-2:-strict-arbitrary-execution">Policy 2: Strict Arbitrary Execution<a class="anchor" href="#policy-2:-strict-arbitrary-execution"></a></h3>
-<p>Policy will only allow arbitrary access of the host system if manifest declares that it's confinement is <code>classic</code>. Apps are isolated by nature and would have no access to sensitive APIs. Block all sensitive API calls if isolated app is not a classic isolation.</p>
-<h2 id="required-manifest-data">Required manifest data<a class="anchor" href="#required-manifest-data"></a></h2>
-<p>The following fields are required to comply with these policies:</p>
+                    <h1 id="post-installation-setup-assistant-(pisa)">Post installation setup assistant (Pisa)<a class="anchor" href="#post-installation-setup-assistant-(pisa)"></a></h1>
+<p><img alt="Pisa" src="../../media/img/pisa/welcome.png" />
+AliceOS comes with a setup assistant, Pisa, used to accomplish common tasks in setting up a game. Pisa is a modular assistant, meaning that developers can edit the assistant in any way needed. Pisa respects fonts and background choices as outlined in the OEM settings. Generally, most Pisa configurations follow this flow:</p>
 <ul>
-<li><code>identifier</code>: the identifier for your Applet. Must follow reverse domain name notation (RDNN).</li>
-<li><code>confinement</code>: the type of confinement your Applet requires.<ul>
-<li><code>strict</code>: The default, sandboxed confinement. Most applets should use this confinement.</li>
-<li><code>classic</code>: The unsandboxed confinement. Applets that must access the host system natively should use this option instead.</li>
+<li>Greet the user and present information about Pisa's purpose.</li>
+<li>Display any imporant information about AliceOS (technical preview, changelog, etc.).</li>
+<li>Display AliceOS license and game licenses and have users agree to terms.</li>
+<li>Display AliceOS OEM information.</li>
+<li>Collect username.</li>
+</ul>
+<h2 id="general-setup-process">General Setup process<a class="anchor" href="#general-setup-process"></a></h2>
+<h3 id="details-page">Details page<a class="anchor" href="#details-page"></a></h3>
+<p><img alt="Details" src="../../media/img/pisa/details.png" /></p>
+<p>The details page displays information about the current release of AliceOS used in the Ren'Py project. For technical previews, information about its preview state is displayed, as well as a link to the issue page.</p>
+<h3 id="license-pages">License pages<a class="anchor" href="#license-pages"></a></h3>
+<p><img alt="Licenses" src="../../media/img/pisa/license.png" /></p>
+<p>The license pages display the according licenses for the project. AliceOS's GNU GPL v3 license in its entirety is displayed, and any custom agreements will be displayed on another page. OEMs can add such licenses in OEM settings or present more licenses with extra license screens.</p>
+<div class="p-notification--caution">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Important:</span> In this version of Pisa, the license pages do not prompt the user to confirm their agreement to the licenses. We recommend simplifying your license to ensure users will read and agree to the terms. Additionally, OEMs have the right to add a confirmation prompt after these screens.
+  </p>
+</div>
+
+<h3 id="provider-details">Provider details<a class="anchor" href="#provider-details"></a></h3>
+<p><img alt="OEM details" src="../../media/img/pisa/oem.png" /></p>
+<p>The provider details page displays any important information about the OEM if AliceOS has been modified. OEMs can change information in OEM settings as well as add additional information.</p>
+<h3 id="username-collection">Username collection<a class="anchor" href="#username-collection"></a></h3>
+<p><img alt="Username" src="../../media/img/pisa/username.png" /></p>
+<p>The username input page prompts users to type in a name. Setup will automatically determine what input its receiving and save the data into <code>persistent.playername</code> accordingly. If the input is null, a Stop error (<code>SETUP_ASSISTANT_FAIL</code>) is thrown. Additionally, users are required to press the Return or Enter key instead of pressing a button.</p>
+<h2 id="customising-the-setup-assistant">Customising the Setup assistant<a class="anchor" href="#customising-the-setup-assistant"></a></h2>
+<p><img alt="Custom" src="../../media/img/pisa/custom.png" /></p>
+<h3 id="oem-settings">OEM settings<a class="anchor" href="#oem-settings"></a></h3>
+<p>Pisa will adhere to the following OEM settings:</p>
+<ul>
+<li>OEM mode</li>
+<li>OEM fonts (text will be rendered and justified accordingly)</li>
+<li>OEM information (displayed in provider details)</li>
+<li>Large font mode (aka. <code>oem_pisa_large_font</code>)</li>
+</ul>
+<h3 id="custom-assets">Custom assets<a class="anchor" href="#custom-assets"></a></h3>
+<p>The resources for Pisa are located in <code>Resources/pisa</code>. No additional code is needed to change these as Pisa will automatically render them.</p>
+<h3 id="custom-steps">Custom steps<a class="anchor" href="#custom-steps"></a></h3>
+<p>Pisa screens are defined as <em>elements</em> in a <code>setup</code> label:
+<pre><code class = "prettyprint lang-py">
+call screen pisa_element(step, step_details, extra_info, has_back, require_input, advance_type, ok_action)
+</code></pre></p>
+<h4 id="pisa_elementstep-step_details-extra_info-has_back-require_input-advance_type-ok_action"><code>pisa_element(step, step_details, extra_info, has_back, require_input, advance_type, ok_action)</code></h4>
+<ul>
+<li><code>step</code> - the title for the screen. Example: "Username Creation"</li>
+<li><code>step_details</code> - the description of the step. Usually includes instructions on that step.</li>
+<li><code>extra_info</code> - scrollable text or additional information not present in description. Usually used for license displays, OEM information, or large amounts of text.</li>
+<li><code>has_back</code> - whether the user can go back a step. Should only be used on the first step.</li>
+<li><code>require_input</code> - whether the user needs to input text. If <code>True</code>, a textbox is added to the screen.</li>
+<li><code>advance_type</code> - the type of progress button displayed:<ul>
+<li><code>0</code> - "Next"</li>
+<li><code>1</code> - "Agree"</li>
+<li><code>2</code> - "Finish"</li>
+<li><code>3</code> - hidden. Generally used in conjunction with <code>require_input</code></li>
 </ul>
 </li>
+<li><code>ok_action</code> - the action performed when pressing the progress button. Usually is <code>Return(0)</code> or <code>Return(input)</code>, if <code>require_input</code> is <code>True</code>.</li>
 </ul>
+<p>These steps are located in the label <code>setup</code> where everything is processed.</p>
                 </div>
               </div>
             </div>
@@ -496,9 +542,10 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#security-overview">Security Overview</a>
+                <li class="p-toc__item"><a class="p-toc__link" href="#general-setup-process">General Setup process</a>
 </li>
-<li class="p-toc__item"><a class="p-toc__link" href="#required-manifest-data">Required manifest data</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#customising-the-setup-assistant">Customising the Setup assistant</a>
+</li>
               </ul>
             </nav>
           </div>

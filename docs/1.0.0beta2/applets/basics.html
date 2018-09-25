@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Applet Security | Documentation</title>
+    <title>Applet Basics | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,23 +121,23 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/security.md"
+                  <option value="../../0.1.2ddtar/applets/basics.md"
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/security.md"
+                  <option value="../../1.0.0beta1/applets/basics.md"
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value="../../1.0.0beta2/applets/security.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta2
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/applets/basics.md"
                     
                   >master
                   </option>
@@ -268,7 +268,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft is-active" href="basics.html">
                           
                           
                             Applet basics
@@ -281,7 +281,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="security.html">
+                            <a class="p-link--soft" href="security.html">
                           
                           
                             Applet security
@@ -445,23 +445,88 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="applet-security">Applet Security<a class="anchor" href="#applet-security"></a></h1>
-<p>AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.</p>
-<h2 id="security-overview">Security Overview<a class="anchor" href="#security-overview"></a></h2>
-<p>For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:</p>
-<h3 id="policy-1:-valid-package-identifier">Policy 1: Valid Package Identifier<a class="anchor" href="#policy-1:-valid-package-identifier"></a></h3>
-<p>Policy will only permit launch of application from entrypoint if identifier is a proper identifier. Policy will prevent launch of app if identifier is incorrect and would log a application error.</p>
-<h3 id="policy-2:-strict-arbitrary-execution">Policy 2: Strict Arbitrary Execution<a class="anchor" href="#policy-2:-strict-arbitrary-execution"></a></h3>
-<p>Policy will only allow arbitrary access of the host system if manifest declares that it's confinement is <code>classic</code>. Apps are isolated by nature and would have no access to sensitive APIs. Block all sensitive API calls if isolated app is not a classic isolation.</p>
-<h2 id="required-manifest-data">Required manifest data<a class="anchor" href="#required-manifest-data"></a></h2>
-<p>The following fields are required to comply with these policies:</p>
+                    <h1 id="applet-basics">Applet Basics<a class="anchor" href="#applet-basics"></a></h1>
+<p>Applets are the core of the AliceOS system. Applets generally interact with the frameworks and services provided. They usually either add extra functionality to the system itself or enhance the gameplay of a visual novel. These self-contained applets are relatively easy to install and configure and follow a standard protocol.</p>
+<div class="p-notification--information">
+    <p class="p-notification__response">
+        <span class="p-notification__status"></span>For aspiring developers, we've provided an <a href="https://github.com/TheAngelReturns/aliceos-applet">applet template</a> to get started with making applets quickly and easily.
+    </p>
+</div>
+
+<h2 id="structure">Structure<a class="anchor" href="#structure"></a></h2>
+<p>Applets follow a generic structure that makes use of existing AliceOS file structures.</p>
+<p>The overall structure of an applet in AliceOS looks like this:</p>
+<div class="codehilite"><pre><span></span>game/
+    Applets/
+        AppletName/
+            AppletName.rpy
+            src/
+            Resources/
+                icons/
+                    16.png
+                    24.png
+                    32.png
+                    48.png
+                    64.png
+                    128.png
+                    256.png
+</pre></div>
+
+
+<p>The Applet itself, as well as its manifest, is located in its source code. Additional source code such as libraries or extra files are located in the <code>src</code> folder, usually. Additional resources such as applet icons, images, etc., are located in the <code>Resources</code> folder.</p>
+<h2 id="manifest">Manifest<a class="anchor" href="#manifest"></a></h2>
+<p>Every applet contains a manifest and essential function list as a Python class of the object <code>Applet</code>. This manifest provides data such as applet names, authors, icons, and the permissions required.</p>
+<h3 id="the-">The <code>Applet()</code> class<a class="anchor" href="#the-"></a></h3>
+<p>The <code>Applet()</code> class is provided as a Framework for AliceOS and consists of important data that is needed for AliceOS to render notifications, list itself in the Control Center, and add icons to the desktop shell.</p>
+<h4 id="basic-applet-information">Basic Applet Information<a class="anchor" href="#basic-applet-information"></a></h4>
+<p>By default, all AliceOS apps must contain the following information:</p>
 <ul>
-<li><code>identifier</code>: the identifier for your Applet. Must follow reverse domain name notation (RDNN).</li>
-<li><code>confinement</code>: the type of confinement your Applet requires.<ul>
-<li><code>strict</code>: The default, sandboxed confinement. Most applets should use this confinement.</li>
-<li><code>classic</code>: The unsandboxed confinement. Applets that must access the host system natively should use this option instead.</li>
+<li><code>short_name</code>: The short name for the applet</li>
+<li><code>long_name</code>: The full name for the applet</li>
+<li><code>app_dir</code>: The directory in which your applet resides in relative to
+    the Applets folder</li>
+<li><code>author</code>: The author of the applet, primarily the developer or
+    developer team</li>
+<li><code>version</code>: The semantic version of the applet (ex.: <code>0.1.0</code>)</li>
+<li><code>description</code>: A short description containing the applet's primary
+    functionality</li>
 </ul>
-</li>
+<h4 id="declaring-app-icons">Declaring App Icons<a class="anchor" href="#declaring-app-icons"></a></h4>
+<p>Icons remain a key part of the AliceOS applet experience. It is recommended that you make the sizes for your icon appropriately and not merely downscale. The delcaration is as follows:</p>
+<pre><code class = "prettyprint lang-py">
+icons = {
+            16: "16.png",
+            24: "24.png",
+            32: "32.png",
+            64: "64.png",
+            128: "128.png",
+            256: "256.png"
+        }
+</code></pre>
+
+<h4 id="setting-app-permissions">Setting App Permissions<a class="anchor" href="#setting-app-permissions"></a></h4>
+<p>AliceOS enforces a strong security system that requires apps to declare what permissions it will need. This is done in a list called <code>permissions</code>. When the user verifies these permissions, they are either stored in the <code>persistent</code> file of your Ren'Py game. More information on applet security can be found in the <a href="security.html">Applet security documentation page</a>.</p>
+<ul>
+<li><code>pm_notify</code> - Send notifications to the user</li>
+<li><code>pm_files</code> - Access the file system outside of the user's Home
+    folder</li>
+<li><code>pm_admin</code> - Modify system settings</li>
+</ul>
+<p>The <code>permissions</code> list uses the <code>short_name</code> of the Applet as a prefix. For instance, the entry for notifications for an applet called "Cyanogen":</p>
+<pre><code class = "prettyprint lang-py">
+persistent.aliceos_permissions["Cyanogen_notify"]
+</code></pre>
+
+<h2 id="default-functions">Default Functions<a class="anchor" href="#default-functions"></a></h2>
+<p>Most Applets will make use of two functions present:</p>
+<h4 id="ask_app_permissions"><code>ask_app_permissions()</code></h4>
+<p>Overtly asks the user permission for the specified items in the <code>permissions</code> list.</p>
+<h4 id="send_temporary_notificationsender-contents-action"><code>send_temporary_notification(sender, contents, action)</code></h4>
+<p>Sends a banner notification built upon the <code>banner()</code> screen.</p>
+<ul>
+<li><code>sender</code> - the title or the "sender" of the banner</li>
+<li><code>contents</code> - the message or description to be displayed</li>
+<li><code>action</code> - the action when user presses "Respond"</li>
 </ul>
                 </div>
               </div>
@@ -496,9 +561,11 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#security-overview">Security Overview</a>
+                <li class="p-toc__item"><a class="p-toc__link" href="#structure">Structure</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#manifest">Manifest</a>
 </li>
-<li class="p-toc__item"><a class="p-toc__link" href="#required-manifest-data">Required manifest data</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#default-functions">Default Functions</a>
+</li>
               </ul>
             </nav>
           </div>

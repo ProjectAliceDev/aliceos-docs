@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Applet Security | Documentation</title>
+    <title>System Applet (Pendleton) | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,23 +121,23 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/security.md"
+                  <option value="../../0.1.2ddtar/applets/pendleton.md"
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/security.md"
+                  <option value="../../1.0.0beta1/applets/pendleton.md"
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value="../../1.0.0beta2/applets/security.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta2
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/applets/pendleton.md"
                     
                   >master
                   </option>
@@ -281,7 +281,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="security.html">
+                            <a class="p-link--soft" href="security.html">
                           
                           
                             Applet security
@@ -307,7 +307,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft is-active" href="pendleton.html">
                           
                           
                             System applet
@@ -445,23 +445,24 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="applet-security">Applet Security<a class="anchor" href="#applet-security"></a></h1>
-<p>AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.</p>
-<h2 id="security-overview">Security Overview<a class="anchor" href="#security-overview"></a></h2>
-<p>For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:</p>
-<h3 id="policy-1:-valid-package-identifier">Policy 1: Valid Package Identifier<a class="anchor" href="#policy-1:-valid-package-identifier"></a></h3>
-<p>Policy will only permit launch of application from entrypoint if identifier is a proper identifier. Policy will prevent launch of app if identifier is incorrect and would log a application error.</p>
-<h3 id="policy-2:-strict-arbitrary-execution">Policy 2: Strict Arbitrary Execution<a class="anchor" href="#policy-2:-strict-arbitrary-execution"></a></h3>
-<p>Policy will only allow arbitrary access of the host system if manifest declares that it's confinement is <code>classic</code>. Apps are isolated by nature and would have no access to sensitive APIs. Block all sensitive API calls if isolated app is not a classic isolation.</p>
-<h2 id="required-manifest-data">Required manifest data<a class="anchor" href="#required-manifest-data"></a></h2>
-<p>The following fields are required to comply with these policies:</p>
+                    <h1 id="system-applet-(pendleton)">System Applet (Pendleton)<a class="anchor" href="#system-applet-(pendleton)"></a></h1>
+<p>AliceOS comes with a unique applet designed for system notifications and processes that must be executed in such a manner: Pendleton.</p>
+<h2 id="applet-information">Applet Information<a class="anchor" href="#applet-information"></a></h2>
 <ul>
-<li><code>identifier</code>: the identifier for your Applet. Must follow reverse domain name notation (RDNN).</li>
-<li><code>confinement</code>: the type of confinement your Applet requires.<ul>
-<li><code>strict</code>: The default, sandboxed confinement. Most applets should use this confinement.</li>
-<li><code>classic</code>: The unsandboxed confinement. Applets that must access the host system natively should use this option instead.</li>
+<li><code>short_name</code> - Pendleton</li>
+<li><code>long_name</code> - AliceOS System</li>
+<li><code>version</code> - Uses AliceOS version</li>
+<li><code>author</code> - AliceOS Developers</li>
+<li><code>permissions</code> - <code>pm_notify</code>, <code>pm_files</code>, <code>pm_sysadmin</code></li>
+<li><code>description</code> - Send system notifications.</li>
 </ul>
-</li>
+<p>In code, Pendleton is called as <code>SystemUIServer</code>.</p>
+<h2 id="sending-notifications">Sending notifications<a class="anchor" href="#sending-notifications"></a></h2>
+<p>To send a notification on the behalf of the system, use Pendleton's <code>send_temporary_notification()</code> functionality. However, there are certain cases in which this should be used:</p>
+<ul class="p-list">
+    <li class="p-list__item is-ticked">A system action is performed (eg. file save, user added)</li>
+    <li class="p-list__item is-ticked">An update or more information on the system is available</li>
+    <li class="p-list__item is-ticked">Anything that does not pertain to an Applet, both first-party and third-party</li>
 </ul>
                 </div>
               </div>
@@ -496,9 +497,8 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#security-overview">Security Overview</a>
-</li>
-<li class="p-toc__item"><a class="p-toc__link" href="#required-manifest-data">Required manifest data</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#applet-information">Applet Information</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#sending-notifications">Sending notifications</a></li>
               </ul>
             </nav>
           </div>

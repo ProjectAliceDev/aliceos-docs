@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Applet Security | Documentation</title>
+    <title>Stylesheet | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,23 +121,24 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/security.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/security.md"
+                  <option value="../../1.0.0beta1/brand/styles.md"
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value="../../1.0.0beta2/applets/security.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta2
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/brand/styles.md"
                     
                   >master
                   </option>
@@ -268,7 +269,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -281,7 +282,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -294,7 +295,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -307,7 +308,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -331,7 +332,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/styles.html">
+                            <a class="p-link--soft is-active" href="styles.html">
                           
                           
                             Stylesheet
@@ -344,7 +345,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/backgrounds.html">
+                            <a class="p-link--soft" href="backgrounds.html">
                           
                           
                             Backgrounds
@@ -400,37 +401,37 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/styles.html">Stylesheet</a>
+                          <a class="p-link--soft" href="styles.html">Stylesheet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/backgrounds.html">Backgrounds</a>
+                          <a class="p-link--soft" href="backgrounds.html">Backgrounds</a>
                         
                       </li>
                     
@@ -445,24 +446,22 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="applet-security">Applet Security<a class="anchor" href="#applet-security"></a></h1>
-<p>AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.</p>
-<h2 id="security-overview">Security Overview<a class="anchor" href="#security-overview"></a></h2>
-<p>For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:</p>
-<h3 id="policy-1:-valid-package-identifier">Policy 1: Valid Package Identifier<a class="anchor" href="#policy-1:-valid-package-identifier"></a></h3>
-<p>Policy will only permit launch of application from entrypoint if identifier is a proper identifier. Policy will prevent launch of app if identifier is incorrect and would log a application error.</p>
-<h3 id="policy-2:-strict-arbitrary-execution">Policy 2: Strict Arbitrary Execution<a class="anchor" href="#policy-2:-strict-arbitrary-execution"></a></h3>
-<p>Policy will only allow arbitrary access of the host system if manifest declares that it's confinement is <code>classic</code>. Apps are isolated by nature and would have no access to sensitive APIs. Block all sensitive API calls if isolated app is not a classic isolation.</p>
-<h2 id="required-manifest-data">Required manifest data<a class="anchor" href="#required-manifest-data"></a></h2>
-<p>The following fields are required to comply with these policies:</p>
-<ul>
-<li><code>identifier</code>: the identifier for your Applet. Must follow reverse domain name notation (RDNN).</li>
-<li><code>confinement</code>: the type of confinement your Applet requires.<ul>
-<li><code>strict</code>: The default, sandboxed confinement. Most applets should use this confinement.</li>
-<li><code>classic</code>: The unsandboxed confinement. Applets that must access the host system natively should use this option instead.</li>
-</ul>
-</li>
-</ul>
+                    <h1 id="aliceos-stylesheet">AliceOS Stylesheet<a class="anchor" href="#aliceos-stylesheet"></a></h1>
+<p>To create a unique stylesheet that matches the vibrancy and openness of AliceOS, we've created a special style system, <strong>Acolyte</strong>, to accomplish this.</p>
+<h2 id="design-languages">Design languages<a class="anchor" href="#design-languages"></a></h2>
+<p>AliceOS follows a combination of the [Material design language]
+(https://material.io) and Canonical's <a href="https://vanillaframework.io">Vanilla design language</a>. While Vanilla provides the basic structure, Material adds additional design features such as shadows to provide a cohesive interface.</p>
+<p>For those wanting to make websites using this combined system, we recommend linking to our CSS stylesheet:</p>
+<pre><code class = "prettyprint lang-html">
+&lt;link rel="stylesheet" href="https://aliceos.app/assets/css/main.css"&gt;
+</code></pre>
+
+<h2 id="default-font">Default font<a class="anchor" href="#default-font"></a></h2>
+<p><img alt="Nunito font" src="https://il.static.1001fonts.net/n/u/nunito-font-5-original.png" /></p>
+<p>AliceOS's default font family is <em>Nunito</em>, which is freely provided by Google Fonts as well as within AliceOS. Nunito provides readable text that looks and feels modern as well as matching closely to AliceOS's brand font, Comfortaa.</p>
+<h2 id="colors">Colors<a class="anchor" href="#colors"></a></h2>
+<p>We've adopted the <a href="https://elementary.io/docs/human-interface-guidelines#color">ElementaryOS color palette</a> as our default color palette for its vibrancy and clarity in context.</p>
+<p><img alt="Elementary color palette" src="../../media/img/colors.png" /></p>
                 </div>
               </div>
             </div>
@@ -496,9 +495,9 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#security-overview">Security Overview</a>
-</li>
-<li class="p-toc__item"><a class="p-toc__link" href="#required-manifest-data">Required manifest data</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#design-languages">Design languages</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#default-font">Default font</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#colors">Colors</a></li>
               </ul>
             </nav>
           </div>

@@ -5,7 +5,7 @@
     
 
     <meta charset="UTF-8" />
-    <title>Applet Security | Documentation</title>
+    <title>Backgrounds | Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../media/img/x-unity-applet-desktop.png" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="../../media/img/x-unity-applet-desktop.png" />
@@ -121,23 +121,25 @@
               <label for="version-select">Version</label>
               <select name="version-select" id="version-select" onchange="selectVersion(this.value)">
                 
-                  <option value="../../0.1.2ddtar/applets/security.md"
+                  <option value="None"
+                    disabled
                     
                   >0.1.2ddtar
                   </option>
                 
-                  <option value="../../1.0.0beta1/applets/security.md"
+                  <option value="None"
+                    disabled
                     
                   >1.0.0beta1
                   </option>
                 
-                  <option value="../../1.0.0beta2/applets/security.md"
+                  <option value=""
+                    selected
                     
                   >1.0.0beta2
                   </option>
                 
-                  <option value=""
-                    selected
+                  <option value="../../master/brand/backgrounds.md"
                     
                   >master
                   </option>
@@ -268,7 +270,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="basics.html">
+                            <a class="p-link--soft" href="../applets/basics.html">
                           
                           
                             Applet basics
@@ -281,7 +283,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft is-active" href="security.html">
+                            <a class="p-link--soft" href="../applets/security.html">
                           
                           
                             Applet security
@@ -294,7 +296,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="renpy.html">
+                            <a class="p-link--soft" href="../applets/renpy.html">
                           
                           
                             Ren'Py applet
@@ -307,7 +309,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="pendleton.html">
+                            <a class="p-link--soft" href="../applets/pendleton.html">
                           
                           
                             System applet
@@ -331,7 +333,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/styles.html">
+                            <a class="p-link--soft" href="styles.html">
                           
                           
                             Stylesheet
@@ -344,7 +346,7 @@
                       
                         <li class="p-sidebar-nav__item">
                           
-                            <a class="p-link--soft" href="../brand/backgrounds.html">
+                            <a class="p-link--soft is-active" href="backgrounds.html">
                           
                           
                             Backgrounds
@@ -400,37 +402,37 @@
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="basics.html">Applet basics</a>
+                          <a class="p-link--soft" href="../applets/basics.html">Applet basics</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="security.html">Applet security</a>
+                          <a class="p-link--soft" href="../applets/security.html">Applet security</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="renpy.html">Ren'Py applet</a>
+                          <a class="p-link--soft" href="../applets/renpy.html">Ren'Py applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="pendleton.html">System applet</a>
+                          <a class="p-link--soft" href="../applets/pendleton.html">System applet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/styles.html">Stylesheet</a>
+                          <a class="p-link--soft" href="styles.html">Stylesheet</a>
                         
                       </li>
                     
                       <li class="p-sidebar-nav__item">
                         
-                          <a class="p-link--soft" href="../brand/backgrounds.html">Backgrounds</a>
+                          <a class="p-link--soft" href="backgrounds.html">Backgrounds</a>
                         
                       </li>
                     
@@ -445,23 +447,32 @@
               <div class="p-content__row">
                 <div class = "row">
                   <div class = "col-8">
-                    <h1 id="applet-security">Applet Security<a class="anchor" href="#applet-security"></a></h1>
-<p>AliceOS has a major focus on privacy and security of user data, especially with the integration of third-party applets. Applets are required to follow the confinement constraints as set by AliceOS's built-in system integrity protection mechanism and with the SEAlice policy, if implemented.</p>
-<h2 id="security-overview">Security Overview<a class="anchor" href="#security-overview"></a></h2>
-<p>For those that are familiar with Snapcraft, Applets follow similar sandboxing principles for validation and access:</p>
-<h3 id="policy-1:-valid-package-identifier">Policy 1: Valid Package Identifier<a class="anchor" href="#policy-1:-valid-package-identifier"></a></h3>
-<p>Policy will only permit launch of application from entrypoint if identifier is a proper identifier. Policy will prevent launch of app if identifier is incorrect and would log a application error.</p>
-<h3 id="policy-2:-strict-arbitrary-execution">Policy 2: Strict Arbitrary Execution<a class="anchor" href="#policy-2:-strict-arbitrary-execution"></a></h3>
-<p>Policy will only allow arbitrary access of the host system if manifest declares that it's confinement is <code>classic</code>. Apps are isolated by nature and would have no access to sensitive APIs. Block all sensitive API calls if isolated app is not a classic isolation.</p>
-<h2 id="required-manifest-data">Required manifest data<a class="anchor" href="#required-manifest-data"></a></h2>
-<p>The following fields are required to comply with these policies:</p>
+                    <h1 id="backgrounds">Backgrounds<a class="anchor" href="#backgrounds"></a></h1>
+<p>AliceOS comes with a unique set of backgrounds that include different art types. OEM manufacturers may want to replicate this style in their own AliceOS distributions to maintain consistency.</p>
+<h2 id="background-bases">Background bases<a class="anchor" href="#background-bases"></a></h2>
+<p>AliceOS backgrounds usually have abstract, low-poly art as the base. This type of art stems from some backgrounds and designs Canonical uses for Ubuntu and Vanilla design as a whole.</p>
+<p><img alt="Default wallpaper for Ubuntu 17.04" src="../../media/img/brand/ubuntu.png" /></p>
+<p>In most cases, the AliceOS team uses the <a href="https://trianglify.io">Trianglify</a> web tool to achieve this effect. The tool is free and allows for the result product to be freely used anywhere.</p>
+<p><img alt="Trianglify web tool" src="../../media/img/brand/trianglify.png" /></p>
+<p>There are a few things we do to make ours unique:</p>
 <ul>
-<li><code>identifier</code>: the identifier for your Applet. Must follow reverse domain name notation (RDNN).</li>
-<li><code>confinement</code>: the type of confinement your Applet requires.<ul>
-<li><code>strict</code>: The default, sandboxed confinement. Most applets should use this confinement.</li>
-<li><code>classic</code>: The unsandboxed confinement. Applets that must access the host system natively should use this option instead.</li>
+<li>We use a 16:9 aspect ratio so that it scales well with Ren'Py backgrounds and widescreen displays. Most backgrounds are 1280x720, but a higher resolution can be set.</li>
+<li>We use the colors found in the Elementary stylesheet as per our own style code (see <a href="styles.html#colors">Colors</a>).</li>
 </ul>
-</li>
+<h2 id="sketches">Sketches<a class="anchor" href="#sketches"></a></h2>
+<p>Our foreground part of AliceOS backgrounds contain sketches by the CG and special case artist for our sister project, DDTAR, Noelia. These sketches are layered on top of the poly art and blended with either "Color Dodge", "Multiply", or "Linear Burn". To achieve this effect with any piece of art, including colored images, we recommend the following:</p>
+<ul>
+<li>Convert the color image to grayscale/black and white. This makes blending a lot easier and less "ugly".</li>
+<li>Play with the blending modes available in your photo editor to achieve the desired effect. Some pieces of art require different blending modes.</li>
+<li>Remove unnecessary content, such as backgrounds. This helps keep the focus to the art itself, not its surrounding content.</li>
+</ul>
+<p><img alt="Alice RSOD death sketch" src="../../media/img/brand/sketch.jpg" /></p>
+<h2 id="special-cases">Special cases<a class="anchor" href="#special-cases"></a></h2>
+<p>At other times, AliceOS uses photos or poly-art overlays to achieve such effects:</p>
+<ul>
+<li>We will use grayscale poly art as an addition, blended layer if needed.</li>
+<li>Photos are adjusted to have less emphasis so that the poly art can blend well with it.</li>
+<li>A base color is set in the back and the sketch is applied before the poly-art overlay.</li>
 </ul>
                 </div>
               </div>
@@ -496,9 +507,9 @@
             <h4 class="p-aside__header">Contents</h4>
             <nav class="p-aside__nav">
               <ul class="p-list">
-                <li class="p-toc__item"><a class="p-toc__link" href="#security-overview">Security Overview</a>
-</li>
-<li class="p-toc__item"><a class="p-toc__link" href="#required-manifest-data">Required manifest data</a></li>
+                <li class="p-toc__item"><a class="p-toc__link" href="#background-bases">Background bases</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#sketches">Sketches</a></li>
+<li class="p-toc__item"><a class="p-toc__link" href="#special-cases">Special cases</a></li>
               </ul>
             </nav>
           </div>
