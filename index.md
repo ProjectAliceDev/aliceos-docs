@@ -13,7 +13,7 @@ permalink: /index
 <div class="p-strip--image is-dark" id = "docs-hero">
     <div class="p-content__row shadow">
         <div class="col-8">
-            <h1>AliceOS Documentation (master)</h1>
+            <h1>AliceOS Documentation (Technical Preview 2)</h1>
             <p>AliceOS brings new features and experiences to any Ren'Py project. From giving users notifications to its extensibility with Applets, AliceOS makes any visual novel more exciting and enriching for its players and developers.</p>
         </div>
     </div>
