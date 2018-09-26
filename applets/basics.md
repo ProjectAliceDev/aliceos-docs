@@ -82,6 +82,7 @@ AliceOS enforces a strong security system that requires apps to declare what per
 -   `pm_files` - Access the file system outside of the user's Home
     folder
 -   `pm_admin` - Modify system settings
+-   `pm_shell` - Lauch applets in the AliceOS system
 
 The `permissions` list uses the `short_name` of the Applet as a prefix. For instance, the entry for notifications for an applet called "Cyanogen":
 
@@ -89,6 +90,18 @@ The `permissions` list uses the `short_name` of the Applet as a prefix. For inst
 persistent.aliceos_permissions["Cyanogen_notify"]
 </code></pre>
 
+#### Launcher capabilities
+For applets that act as desktop shells, the `launch` properties make it easier to access launching functions:
+
+<pre><code class = "prettyprint lang-py">
+launch = {
+    "action": "Return(0)",
+    "show_in_launcher": True
+}
+</code></pre>
+
+- `action` - The action that launches the applet
+- `show_in_launcher` - Determines whether the applet should be included in the Applet list
 
 ## Default Functions
 

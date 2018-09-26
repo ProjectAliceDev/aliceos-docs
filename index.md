@@ -13,7 +13,7 @@ permalink: /index
 <div class="p-strip--image is-dark" id = "docs-hero">
     <div class="p-content__row shadow">
         <div class="col-8">
-            <h1>AliceOS Documentation (Technical Preview 2)</h1>
+            <h1>AliceOS Documentation (master)</h1>
             <p>AliceOS brings new features and experiences to any Ren'Py project. From giving users notifications to its extensibility with Applets, AliceOS makes any visual novel more exciting and enriching for its players and developers.</p>
         </div>
     </div>
@@ -44,9 +44,10 @@ git clone https://github.com/TheAngelReturns/aliceos.git
         <hr class="is-deep">
         <div class="u-equal-height">
             <div class="col-12">
-                <h3>Download</h3>
+                <h3>Module System (BETA)</h3>
                 <div>
-                    <p>If you want to download AliceOS as a ZIP or TAR.GZ file, you can use the downloads page to grab a copy.</p>
+                    <p>Alternatively, developers can make use of the AliceOS Module system. Developers can download the base RPA package for their respective version of Ren'Py (6.99.12.4 or 7+) and continue to build off of this with their own source code. This gives developers and OEMs an easier method to updating the AliceOS core without needing to completely modify the existing installation.</p>
+                    <p>This version is still a work-in-progress and may not work as expected.</p>
                     <p><a href = "https://github.com/TheAngelReturns/aliceos/releases/" class = "p-button--positive p-link--external">Download</a></p>
                 </div>
             </div>
