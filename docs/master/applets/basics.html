@@ -517,12 +517,26 @@ icons = {
 <li><code>pm_files</code> - Access the file system outside of the user's Home
     folder</li>
 <li><code>pm_admin</code> - Modify system settings</li>
+<li><code>pm_shell</code> - Lauch applets in the AliceOS system</li>
 </ul>
 <p>The <code>permissions</code> list uses the <code>short_name</code> of the Applet as a prefix. For instance, the entry for notifications for an applet called "Cyanogen":</p>
 <pre><code class = "prettyprint lang-py">
 persistent.aliceos_permissions["Cyanogen_notify"]
 </code></pre>
 
+<h4 id="launcher-capabilities">Launcher capabilities<a class="anchor" href="#launcher-capabilities"></a></h4>
+<p>For applets that act as desktop shells, the <code>launch</code> properties make it easier to access launching functions:</p>
+<pre><code class = "prettyprint lang-py">
+launch = {
+    "action": "Return(0)",
+    "show_in_launcher": True
+}
+</code></pre>
+
+<ul>
+<li><code>action</code> - The action that launches the applet</li>
+<li><code>show_in_launcher</code> - Determines whether the applet should be included in the Applet list</li>
+</ul>
 <h2 id="default-functions">Default Functions<a class="anchor" href="#default-functions"></a></h2>
 <p>Most Applets will make use of two functions present:</p>
 <h4 id="ask_app_permissions"><code>ask_app_permissions()</code></h4>
