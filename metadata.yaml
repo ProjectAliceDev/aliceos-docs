@@ -8,6 +8,8 @@ navigation:
     - children:
       - title: Getting started
         location: index.md
+      - title: Distribution
+        location: dist.md
     
     - title: AliceOS System
       children:
