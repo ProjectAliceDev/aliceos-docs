@@ -5,12 +5,13 @@ title: Stop errors
 Stop errors (red screens of death) are system-wide errors that occur when a problem with the operating system has been reached. These errors are similar to ones found in Windows 8 and can be customised to the developer's needs.
 ![Standard boot screen](../media/img/rsod/default.png)
 
-## Typical stop errors
-- `INACCESSIBLE_BOOT_DEVICE` - the file required to start the integrity check process is missing.
-- `ERR_SEALICE_LOCK` - one or more of the SEAlice components are missing. This is displayed if SEAlice has been implemented into your AliceOS distribution.
-- `MISSING_CYANIDE_INSTRUMENT` - Dark nights are upon us! / Black magic slays on the chorus!
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Error Databaswe:</span>Users of AliceOS can now search for the respective Stop error on the AliceOS Error Database, a collective database by the AliceOS team and third-party OEMs. We recommend searching for the error in the database than here.
+  </p>
+</div>
 
-Additionally, manufacturers and AliceOS distribution managers can add additional Stop errors. If you receive a Stop error that doesn't match the defaults listed above, plase consult your AliceOS distribution manager or manufacturer.
+<p><a href = "https://errordb.aliceos.app" class = "p-button--brand p-link--external">View Error Database</a></p>
 
 ## Typical causes of Stop errors
 These may or may not apply to each Stop error, but these are common causes for such errors.
