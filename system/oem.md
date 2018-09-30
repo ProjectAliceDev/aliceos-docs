@@ -21,7 +21,7 @@ For distribution with Aperture Science products only. If this policy is violated
 </code></pre>
 
 ## Licenses
-AliceOS generally displays two license agreement prompts: the standard GNU GPL license for the platform and an OEM's agreement, usually describing the game's nature (eg. disclaimers, IP guidelines, etc.). To write your license, edit the license field:
+AliceOS generally displays two license agreement prompts: the standard GNU LGPL license for the platform and an OEM's agreement, usually describing the game's nature (eg. disclaimers, IP guidelines, etc.). To write your license, edit the license field:
 
 <pre><code class = "prettyprint lang-py">
 license = """\

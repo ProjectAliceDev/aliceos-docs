@@ -20,7 +20,7 @@ The details page displays information about the current release of AliceOS used 
 ### License pages
 ![Licenses](../media/img/pisa/license.png)
 
-The license pages display the according licenses for the project. AliceOS's GNU GPL v3 license in its entirety is displayed, and any custom agreements will be displayed on another page. OEMs can add such licenses in OEM settings or present more licenses with extra license screens.
+The license pages display the according licenses for the project. AliceOS's GNU LGPL v3 license in its entirety is displayed, and any custom agreements will be displayed on another page. OEMs can add such licenses in OEM settings or present more licenses with extra license screens.
 
 <div class="p-notification--caution">
   <p class="p-notification__response">
