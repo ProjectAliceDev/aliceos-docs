@@ -26,7 +26,7 @@ permalink: /index
                 <div>
                     <p>If you want to use AliceOS with any particular version of the Ren'Py SDK, it's best to grab a copy of the source code and compile it manually:</p>
                     <p><pre>
-git clone https://github.com/TheAngelReturns/aliceos.git
+git clone https://github.com/ProjectAliceDev/aliceos.git
                     </pre></p>
                     <p>
                         To add the source code directly to your game, take the contents of the root directory and copy them over to your Ren'Py project's <code>game</code> folder.
@@ -48,7 +48,7 @@ git clone https://github.com/TheAngelReturns/aliceos.git
                 <div>
                     <p>Alternatively, developers can make use of the AliceOS Module system. Developers can download the base RPA package for their respective version of Ren'Py (6.99.12.4 or 7+) and continue to build off of this with their own source code. This gives developers and OEMs an easier method to updating the AliceOS core without needing to completely modify the existing installation.</p>
                     <p>This version is still a work-in-progress and may not work as expected.</p>
-                    <p><a href = "https://github.com/TheAngelReturns/aliceos/releases/" class = "p-button--positive p-link--external">Download</a></p>
+                    <p><a href = "https://github.com/ProjectAliceDev/aliceos/releases/" class = "p-button--positive p-link--external">Download</a></p>
                 </div>
             </div>
         </div>
@@ -68,9 +68,9 @@ git clone https://github.com/TheAngelReturns/aliceos.git
             <div class="col-6">
                 <h2>Contribute</h2>
                 <ul class="p-list">
-                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos">Push some code</a></li>
-                    <li class="p-list__item--deep"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos/issues/new">File an issue</a></li>
-                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/TheAngelReturns/aliceos-docs">Write some docs</a></li>
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/ProjectAliceDev/aliceos">Push some code</a></li>
+                    <li class="p-list__item--deep"><a class="p-link--external" href="https://github.com/ProjectAliceDev/aliceos/issues/new">File an issue</a></li>
+                    <li class="p-list__item"><a class="p-link--external" href="https://github.com/ProjectAliceDev/aliceos-docs">Write some docs</a></li>
                 </ul>
             </div>
         </div>

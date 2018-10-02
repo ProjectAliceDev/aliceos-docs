@@ -8,7 +8,7 @@ Applets are the core of the AliceOS system. Applets generally interact with the 
 
 <div class="p-notification--information">
     <p class="p-notification__response">
-        <span class="p-notification__status"></span>For aspiring developers, we've provided an <a href="https://github.com/TheAngelReturns/aliceos-applet">applet template</a> to get started with making applets quickly and easily.
+        <span class="p-notification__status"></span>For aspiring developers, we've provided an <a href="https://github.com/ProjectAliceDev/aliceos-applet">applet template</a> to get started with making applets quickly and easily.
     </p>
 </div>
 

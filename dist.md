@@ -25,4 +25,4 @@ Alternatively, if developers want to bundle AliceOS by other means, note that th
 
 For those that are making modifications to _Doki Doki Literature Club!_, we recommend grabbing the DDLC Mod Template maintained by Project Alice. This flavor already imports the bootloader and adds the proper options to package AliceOS as a part of the game.
 
-[Get the template &rsaquo;](https://github.com/TheAngelReturns/DDLCModTemplate)
+[Get the template &rsaquo;](https://github.com/ProjectAliceDev/DDLCModTemplate)
